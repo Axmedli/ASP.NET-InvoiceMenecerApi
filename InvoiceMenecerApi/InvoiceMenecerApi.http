@@ -1,0 +1,6 @@
+@InvoiceMenecerApi_HostAddress = http://localhost:5032
+
+GET {{InvoiceMenecerApi_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

@@ -1,0 +1,509 @@
+[
+  {
+    "ContainingType": "InvoiceMenecerApi.Controllers.CustomerController",
+    "Method": "CreateCustomer",
+    "RelativePath": "api/Customer",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "customerCreateDto",
+        "Type": "InvoiceMenecerApi.DTOs.CustomerDto.CreateCustomerDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "ASP_NET_08.Common.ApiResponse\u00601[[InvoiceMenecerApi.DTOs.CustomerDto.CustomerResponseDto, InvoiceMenecerApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "InvoiceMenecerApi.Controllers.CustomerController",
+    "Method": "GetAllCustomers",
+    "RelativePath": "api/Customer",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "ASP_NET_08.Common.ApiResponse\u00601[[System.Collections.Generic.IEnumerable\u00601[[InvoiceMenecerApi.DTOs.CustomerDto.CustomerResponseDto, InvoiceMenecerApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "InvoiceMenecerApi.Controllers.CustomerController",
+    "Method": "UpdateCustomer",
+    "RelativePath": "api/Customer/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      },
+      {
+        "Name": "customerUpdateDto",
+        "Type": "InvoiceMenecerApi.DTOs.CustomerDto.UpdateCustomerDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "ASP_NET_08.Common.ApiResponse\u00601[[InvoiceMenecerApi.DTOs.CustomerDto.CustomerResponseDto, InvoiceMenecerApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "InvoiceMenecerApi.Controllers.CustomerController",
+    "Method": "HardDeleteCustomer",
+    "RelativePath": "api/Customer/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "ASP_NET_08.Common.ApiResponse\u00601[[System.String, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "InvoiceMenecerApi.Controllers.CustomerController",
+    "Method": "GetCustomerById",
+    "RelativePath": "api/Customer/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "ASP_NET_08.Common.ApiResponse\u00601[[InvoiceMenecerApi.DTOs.CustomerDto.CustomerResponseDto, InvoiceMenecerApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "InvoiceMenecerApi.Controllers.CustomerController",
+    "Method": "ArchiveCustomer",
+    "RelativePath": "api/Customer/{id}/archive",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "ASP_NET_08.Common.ApiResponse\u00601[[System.String, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "InvoiceMenecerApi.Controllers.InvoiceController",
+    "Method": "CreateInvoice",
+    "RelativePath": "api/Invoice",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "createInvoiceDto",
+        "Type": "InvoiceMenecerApi.DTOs.InvoiceDto.CreateInvoiceDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "ASP_NET_08.Common.ApiResponse\u00601[[InvoiceMenecerApi.DTOs.InvoiceDto.InvoiceResponseDto, InvoiceMenecerApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "InvoiceMenecerApi.Controllers.InvoiceController",
+    "Method": "GetAllInvoices",
+    "RelativePath": "api/Invoice",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "ASP_NET_08.Common.ApiResponse\u00601[[System.Collections.Generic.IEnumerable\u00601[[InvoiceMenecerApi.DTOs.InvoiceDto.InvoiceResponseDto, InvoiceMenecerApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "InvoiceMenecerApi.Controllers.InvoiceController",
+    "Method": "UpdateInvoice",
+    "RelativePath": "api/Invoice/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      },
+      {
+        "Name": "updateInvoiceDto",
+        "Type": "InvoiceMenecerApi.DTOs.InvoiceDto.UpdateInvoiceDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "ASP_NET_08.Common.ApiResponse\u00601[[InvoiceMenecerApi.DTOs.InvoiceDto.InvoiceResponseDto, InvoiceMenecerApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "InvoiceMenecerApi.Controllers.InvoiceController",
+    "Method": "HardDeleteInvoice",
+    "RelativePath": "api/Invoice/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "ASP_NET_08.Common.ApiResponse\u00601[[System.Boolean, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "InvoiceMenecerApi.Controllers.InvoiceController",
+    "Method": "GetInvoiceById",
+    "RelativePath": "api/Invoice/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "ASP_NET_08.Common.ApiResponse\u00601[[InvoiceMenecerApi.DTOs.InvoiceDto.InvoiceResponseDto, InvoiceMenecerApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "InvoiceMenecerApi.Controllers.InvoiceController",
+    "Method": "ArchiveInvoice",
+    "RelativePath": "api/Invoice/{id}/archive",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "ASP_NET_08.Common.ApiResponse\u00601[[System.Boolean, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "InvoiceMenecerApi.Controllers.InvoiceController",
+    "Method": "ChangeInvoiceStatus",
+    "RelativePath": "api/Invoice/{id}/status",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      },
+      {
+        "Name": "newStatus",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "ASP_NET_08.Common.ApiResponse\u00601[[InvoiceMenecerApi.DTOs.InvoiceDto.InvoiceResponseDto, InvoiceMenecerApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "InvoiceMenecerApi.Controllers.InvoiceController",
+    "Method": "GetInvoicesByCustomerId",
+    "RelativePath": "api/Invoice/customer/{customerId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "customerId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "ASP_NET_08.Common.ApiResponse\u00601[[System.Collections.Generic.IEnumerable\u00601[[InvoiceMenecerApi.DTOs.InvoiceDto.InvoiceResponseDto, InvoiceMenecerApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "InvoiceMenecerApi.Controllers.InvoiceRowController",
+    "Method": "GetRowById",
+    "RelativePath": "api/InvoiceRow/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "ASP_NET_08.Common.ApiResponse\u00601[[InvoiceMenecerApi.DTOs.InvoiceDto.InvoiceRowDto, InvoiceMenecerApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "InvoiceMenecerApi.Controllers.InvoiceRowController",
+    "Method": "UpdateRow",
+    "RelativePath": "api/InvoiceRow/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      },
+      {
+        "Name": "updateRowDto",
+        "Type": "InvoiceMenecerApi.DTOs.InvoiceDto.CreateInvoiceRowDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "ASP_NET_08.Common.ApiResponse\u00601[[InvoiceMenecerApi.DTOs.InvoiceDto.InvoiceRowDto, InvoiceMenecerApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "InvoiceMenecerApi.Controllers.InvoiceRowController",
+    "Method": "DeleteRow",
+    "RelativePath": "api/InvoiceRow/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "ASP_NET_08.Common.ApiResponse\u00601[[System.String, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "InvoiceMenecerApi.Controllers.InvoiceRowController",
+    "Method": "GetRowsByInvoiceId",
+    "RelativePath": "api/InvoiceRow/invoice/{invoiceId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "invoiceId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "ASP_NET_08.Common.ApiResponse\u00601[[System.Collections.Generic.IEnumerable\u00601[[InvoiceMenecerApi.DTOs.InvoiceDto.InvoiceRowDto, InvoiceMenecerApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "InvoiceMenecerApi.Controllers.InvoiceRowController",
+    "Method": "AddRowToInvoice",
+    "RelativePath": "api/InvoiceRow/invoice/{invoiceId}",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "invoiceId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      },
+      {
+        "Name": "createRowDto",
+        "Type": "InvoiceMenecerApi.DTOs.InvoiceDto.CreateInvoiceRowDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "ASP_NET_08.Common.ApiResponse\u00601[[InvoiceMenecerApi.DTOs.InvoiceDto.InvoiceRowDto, InvoiceMenecerApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  }
+]

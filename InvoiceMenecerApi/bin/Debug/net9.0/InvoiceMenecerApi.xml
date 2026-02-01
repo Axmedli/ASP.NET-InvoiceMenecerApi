@@ -1,0 +1,384 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>InvoiceMenecerApi</name>
+    </assembly>
+    <members>
+        <member name="T:InvoiceMenecerApi.Controllers.CustomerController">
+            <summary>
+            Controller for managing customer-related operations such as create, update, delete, archive, and retrieval.
+            </summary>
+        </member>
+        <member name="M:InvoiceMenecerApi.Controllers.CustomerController.#ctor(InvoiceMenecerApi.Services.Interfaces.ICustomerService)">
+            <summary>
+            Initializes a new instance of the <see cref="T:InvoiceMenecerApi.Controllers.CustomerController"/> class.
+            </summary>
+            <param name="customerService">Service for customer operations.</param>
+        </member>
+        <member name="M:InvoiceMenecerApi.Controllers.CustomerController.CreateCustomer(InvoiceMenecerApi.DTOs.CustomerDto.CreateCustomerDto)">
+            <summary>
+            Creates a new customer.
+            </summary>
+            <param name="customerCreateDto">Customer creation data.</param>
+            <returns>The created customer.</returns>
+        </member>
+        <member name="M:InvoiceMenecerApi.Controllers.CustomerController.UpdateCustomer(System.Guid,InvoiceMenecerApi.DTOs.CustomerDto.UpdateCustomerDto)">
+            <summary>
+            Updates an existing customer.
+            </summary>
+            <param name="id">Customer ID.</param>
+            <param name="customerUpdateDto">Customer update data.</param>
+            <returns>The updated customer.</returns>
+        </member>
+        <member name="M:InvoiceMenecerApi.Controllers.CustomerController.HardDeleteCustomer(System.Guid)">
+            <summary>
+            Permanently deletes a customer.
+            </summary>
+            <param name="id">Customer ID.</param>
+            <returns>Status of the deletion.</returns>
+        </member>
+        <member name="M:InvoiceMenecerApi.Controllers.CustomerController.ArchiveCustomer(System.Guid)">
+            <summary>
+            Archives a customer.
+            </summary>
+            <param name="id">Customer ID.</param>
+            <returns>Status of the archiving operation.</returns>
+        </member>
+        <member name="M:InvoiceMenecerApi.Controllers.CustomerController.GetCustomerById(System.Guid)">
+            <summary>
+            Retrieves a customer by ID.
+            </summary>
+            <param name="id">Customer ID.</param>
+            <returns>The customer data.</returns>
+        </member>
+        <member name="M:InvoiceMenecerApi.Controllers.CustomerController.GetAllCustomers">
+            <summary>
+            Retrieves all customers.
+            </summary>
+            <returns>List of all customers.</returns>
+        </member>
+        <member name="T:InvoiceMenecerApi.Controllers.InvoiceController">
+            <summary>
+            Controller for managing invoices. Provides endpoints for creating, updating, deleting, archiving, 
+            changing status, and retrieving invoices.
+            </summary>
+        </member>
+        <member name="M:InvoiceMenecerApi.Controllers.InvoiceController.#ctor(InvoiceMenecerApi.Services.Interfaces.IInvoiceService)">
+            <summary>
+            Initializes a new instance of the <see cref="T:InvoiceMenecerApi.Controllers.InvoiceController"/> class.
+            </summary>
+            <param name="invoiceService">Service for invoice operations.</param>
+        </member>
+        <member name="M:InvoiceMenecerApi.Controllers.InvoiceController.CreateInvoice(InvoiceMenecerApi.DTOs.InvoiceDto.CreateInvoiceDto)">
+            <summary>
+            Creates a new invoice.
+            </summary>
+            <param name="createInvoiceDto">Invoice data to create.</param>
+            <returns>The created invoice.</returns>
+        </member>
+        <member name="M:InvoiceMenecerApi.Controllers.InvoiceController.UpdateInvoice(System.Guid,InvoiceMenecerApi.DTOs.InvoiceDto.UpdateInvoiceDto)">
+            <summary>
+            Updates an existing invoice.
+            </summary>
+            <param name="id">Invoice ID.</param>
+            <param name="updateInvoiceDto">Updated invoice data.</param>
+            <returns>The updated invoice.</returns>
+        </member>
+        <member name="M:InvoiceMenecerApi.Controllers.InvoiceController.ChangeInvoiceStatus(System.Guid,InvoiceMenecer.Models.InvoiceStatus)">
+            <summary>
+            Changes the status of an invoice.
+            </summary>
+            <param name="id">Invoice ID.</param>
+            <param name="newStatus">New status for the invoice.</param>
+            <returns>The invoice with updated status.</returns>
+        </member>
+        <member name="M:InvoiceMenecerApi.Controllers.InvoiceController.HardDeleteInvoice(System.Guid)">
+            <summary>
+            Permanently deletes an invoice.
+            </summary>
+            <param name="id">Invoice ID.</param>
+            <returns>True if deleted, otherwise not found.</returns>
+        </member>
+        <member name="M:InvoiceMenecerApi.Controllers.InvoiceController.ArchiveInvoice(System.Guid)">
+            <summary>
+            Archives an invoice.
+            </summary>
+            <param name="id">Invoice ID.</param>
+            <returns>True if archived, otherwise not found.</returns>
+        </member>
+        <member name="M:InvoiceMenecerApi.Controllers.InvoiceController.GetAllInvoices">
+            <summary>
+            Retrieves all invoices.
+            </summary>
+            <returns>List of all invoices.</returns>
+        </member>
+        <member name="M:InvoiceMenecerApi.Controllers.InvoiceController.GetInvoiceById(System.Guid)">
+            <summary>
+            Retrieves an invoice by its ID.
+            </summary>
+            <param name="id">Invoice ID.</param>
+            <returns>The invoice if found, otherwise not found.</returns>
+        </member>
+        <member name="M:InvoiceMenecerApi.Controllers.InvoiceController.GetInvoicesByCustomerId(System.Guid)">
+            <summary>
+            Retrieves all invoices for a specific customer.
+            </summary>
+            <param name="customerId">Customer ID.</param>
+            <returns>List of invoices for the customer.</returns>
+        </member>
+        <member name="M:InvoiceMenecerApi.Controllers.InvoiceRowController.GetRowsByInvoiceId(System.Guid)">
+            <summary>
+            Get all rows for a specific invoice
+            </summary>
+            <param name="invoiceId">Invoice ID</param>
+        </member>
+        <member name="M:InvoiceMenecerApi.Controllers.InvoiceRowController.GetRowById(System.Guid)">
+            <summary>
+            Get a specific row by ID
+            </summary>
+            <param name="id">Row ID</param>
+        </member>
+        <member name="M:InvoiceMenecerApi.Controllers.InvoiceRowController.AddRowToInvoice(System.Guid,InvoiceMenecerApi.DTOs.InvoiceDto.CreateInvoiceRowDto)">
+            <summary>
+            Add a new row to an invoice
+            </summary>
+            <param name="invoiceId">Invoice ID</param>
+            <param name="createRowDto">Row data</param>
+        </member>
+        <member name="M:InvoiceMenecerApi.Controllers.InvoiceRowController.UpdateRow(System.Guid,InvoiceMenecerApi.DTOs.InvoiceDto.CreateInvoiceRowDto)">
+            <summary>
+            Update an existing row
+            </summary>
+            <param name="id">Row ID</param>
+            <param name="updateRowDto">Updated row data</param>
+        </member>
+        <member name="M:InvoiceMenecerApi.Controllers.InvoiceRowController.DeleteRow(System.Guid)">
+            <summary>
+            Delete a row from an invoice
+            </summary>
+            <param name="id">Row ID</param>
+        </member>
+        <member name="T:InvoiceMenecerApi.DTOs.CustomerDto.CreateCustomerDto">
+            <summary>
+            Data Transfer Object for creating a new customer.
+            </summary>
+        </member>
+        <member name="P:InvoiceMenecerApi.DTOs.CustomerDto.CreateCustomerDto.Name">
+            <summary>
+            Gets or sets the customer's name.
+            </summary>
+        </member>
+        <member name="P:InvoiceMenecerApi.DTOs.CustomerDto.CreateCustomerDto.Address">
+            <summary>
+            Gets or sets the customer's address.
+            </summary>
+        </member>
+        <member name="P:InvoiceMenecerApi.DTOs.CustomerDto.CreateCustomerDto.Email">
+            <summary>
+            Gets or sets the customer's email address.
+            </summary>
+        </member>
+        <member name="P:InvoiceMenecerApi.DTOs.CustomerDto.CreateCustomerDto.PhoneNumber">
+            <summary>
+            Gets or sets the customer's phone number.
+            </summary>
+        </member>
+        <member name="T:InvoiceMenecerApi.DTOs.CustomerDto.CustomerResponseDto">
+            <summary>
+            Represents the response data transfer object for a customer.
+            </summary>
+        </member>
+        <member name="P:InvoiceMenecerApi.DTOs.CustomerDto.CustomerResponseDto.Id">
+            <summary>
+            Gets or sets the unique identifier of the customer.
+            </summary>
+        </member>
+        <member name="P:InvoiceMenecerApi.DTOs.CustomerDto.CustomerResponseDto.Name">
+            <summary>
+            Gets or sets the name of the customer.
+            </summary>
+        </member>
+        <member name="P:InvoiceMenecerApi.DTOs.CustomerDto.CustomerResponseDto.Address">
+            <summary>
+            Gets or sets the address of the customer.
+            </summary>
+        </member>
+        <member name="P:InvoiceMenecerApi.DTOs.CustomerDto.CustomerResponseDto.Email">
+            <summary>
+            Gets or sets the email address of the customer.
+            </summary>
+        </member>
+        <member name="P:InvoiceMenecerApi.DTOs.CustomerDto.CustomerResponseDto.PhoneNumber">
+            <summary>
+            Gets or sets the phone number of the customer.
+            </summary>
+        </member>
+        <member name="P:InvoiceMenecerApi.DTOs.CustomerDto.CustomerResponseDto.CreatedAt">
+            <summary>
+            Gets or sets the date and time when the customer was created.
+            </summary>
+        </member>
+        <member name="P:InvoiceMenecerApi.DTOs.CustomerDto.CustomerResponseDto.UpdatedAt">
+            <summary>
+            Gets or sets the date and time when the customer was last updated.
+            </summary>
+        </member>
+        <member name="T:InvoiceMenecerApi.DTOs.CustomerDto.UpdateCustomerDto">
+            <summary>
+            DTO for updating customer information.
+            </summary>
+        </member>
+        <member name="P:InvoiceMenecerApi.DTOs.CustomerDto.UpdateCustomerDto.Name">
+            <summary>
+            Customer's name.
+            </summary>
+        </member>
+        <member name="P:InvoiceMenecerApi.DTOs.CustomerDto.UpdateCustomerDto.Address">
+            <summary>
+            Customer's address.
+            </summary>
+        </member>
+        <member name="P:InvoiceMenecerApi.DTOs.CustomerDto.UpdateCustomerDto.Email">
+            <summary>
+            Customer's email address.
+            </summary>
+        </member>
+        <member name="P:InvoiceMenecerApi.DTOs.CustomerDto.UpdateCustomerDto.PhoneNumber">
+            <summary>
+            Customer's phone number.
+            </summary>
+        </member>
+        <member name="T:InvoiceMenecerApi.DTOs.InvoiceDto.ChangeInvoiceStatusDto">
+            <summary>
+            DTO for changing the status of an invoice.
+            </summary>
+        </member>
+        <member name="P:InvoiceMenecerApi.DTOs.InvoiceDto.ChangeInvoiceStatusDto.Status">
+            <summary>
+            The new status to set for the invoice.
+            </summary>
+        </member>
+        <member name="T:InvoiceMenecerApi.DTOs.InvoiceDto.CreateInvoiceDto">
+            <summary>
+            DTO for creating a new invoice, including customer, date range, comment, and invoice rows.
+            </summary>
+        </member>
+        <member name="P:InvoiceMenecerApi.DTOs.InvoiceDto.CreateInvoiceDto.CustomerId">
+            <summary>
+            Gets or sets the unique identifier of the customer.
+            </summary>
+        </member>
+        <member name="P:InvoiceMenecerApi.DTOs.InvoiceDto.CreateInvoiceDto.StartDate">
+            <summary>
+            Gets or sets the start date of the invoice period.
+            </summary>
+        </member>
+        <member name="P:InvoiceMenecerApi.DTOs.InvoiceDto.CreateInvoiceDto.EndDate">
+            <summary>
+            Gets or sets the end date of the invoice period.
+            </summary>
+        </member>
+        <member name="P:InvoiceMenecerApi.DTOs.InvoiceDto.CreateInvoiceDto.Comment">
+            <summary>
+            Gets or sets an optional comment for the invoice.
+            </summary>
+        </member>
+        <member name="T:InvoiceMenecerApi.DTOs.InvoiceDto.InvoiceResponseDto">
+            <summary>
+            Represents the response data transfer object for an invoice, including invoice details and associated rows.
+            </summary>
+        </member>
+        <member name="P:InvoiceMenecerApi.DTOs.InvoiceDto.InvoiceResponseDto.Id">
+            <summary>
+            Gets or sets the unique identifier of the invoice.
+            </summary>
+        </member>
+        <member name="P:InvoiceMenecerApi.DTOs.InvoiceDto.InvoiceResponseDto.CustomerId">
+            <summary>
+            Gets or sets the unique identifier of the customer.
+            </summary>
+        </member>
+        <member name="P:InvoiceMenecerApi.DTOs.InvoiceDto.InvoiceResponseDto.CustomerName">
+            <summary>
+            Gets or sets the name of the customer.
+            </summary>
+        </member>
+        <member name="P:InvoiceMenecerApi.DTOs.InvoiceDto.InvoiceResponseDto.StartDate">
+            <summary>
+            Gets or sets the start date of the invoice period.
+            </summary>
+        </member>
+        <member name="P:InvoiceMenecerApi.DTOs.InvoiceDto.InvoiceResponseDto.EndDate">
+            <summary>
+            Gets or sets the end date of the invoice period.
+            </summary>
+        </member>
+        <member name="P:InvoiceMenecerApi.DTOs.InvoiceDto.InvoiceResponseDto.TotalSum">
+            <summary>
+            Gets or sets the total sum of the invoice.
+            </summary>
+        </member>
+        <member name="P:InvoiceMenecerApi.DTOs.InvoiceDto.InvoiceResponseDto.Comment">
+            <summary>
+            Gets or sets an optional comment for the invoice.
+            </summary>
+        </member>
+        <member name="P:InvoiceMenecerApi.DTOs.InvoiceDto.InvoiceResponseDto.Status">
+            <summary>
+            Gets or sets the status of the invoice.
+            </summary>
+        </member>
+        <member name="P:InvoiceMenecerApi.DTOs.InvoiceDto.InvoiceResponseDto.CreatedAt">
+            <summary>
+            Gets or sets the creation date and time of the invoice.
+            </summary>
+        </member>
+        <member name="P:InvoiceMenecerApi.DTOs.InvoiceDto.InvoiceResponseDto.UpdatedAt">
+            <summary>
+            Gets or sets the last updated date and time of the invoice.
+            </summary>
+        </member>
+        <member name="P:InvoiceMenecerApi.DTOs.InvoiceDto.InvoiceResponseDto.Rows">
+            <summary>
+            Gets or sets the list of invoice row details.
+            </summary>
+        </member>
+        <member name="T:InvoiceMenecerApi.DTOs.InvoiceDto.UpdateInvoiceDto">
+            <summary>
+            DTO for updating an invoice, including date range, comment, and invoice rows.
+            </summary>
+        </member>
+        <member name="P:InvoiceMenecerApi.DTOs.InvoiceDto.UpdateInvoiceDto.StartDate">
+            <summary>
+            The start date of the invoice period.
+            </summary>
+        </member>
+        <member name="P:InvoiceMenecerApi.DTOs.InvoiceDto.UpdateInvoiceDto.EndDate">
+            <summary>
+            The end date of the invoice period.
+            </summary>
+        </member>
+        <member name="P:InvoiceMenecerApi.DTOs.InvoiceDto.UpdateInvoiceDto.Comment">
+            <summary>
+            Optional comment for the invoice.
+            </summary>
+        </member>
+        <member name="P:InvoiceMenecerApi.DTOs.InvoiceDto.UpdateInvoiceDto.Rows">
+            <summary>
+            List of invoice row details to update.
+            </summary>
+        </member>
+        <member name="T:InvoiceMenecerApi.Migrations.Initial">
+            <inheritdoc />
+        </member>
+        <member name="M:InvoiceMenecerApi.Migrations.Initial.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:InvoiceMenecerApi.Migrations.Initial.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:InvoiceMenecerApi.Migrations.Initial.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+    </members>
+</doc>
