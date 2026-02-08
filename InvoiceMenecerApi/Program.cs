@@ -1,4 +1,6 @@
 ﻿using ASP_NET_08.Mapping;
+using FluentValidation;
+using FluentValidation.AspNetCore;
 using InvoiceMenecerApi.Services;
 using InvoiceMenecerApi.Services.Interfaces;
 using Microsoft.EntityFrameworkCore;
@@ -53,6 +55,9 @@ builder.Services.AddScoped<IInvoiceService, InvoiceService>();
 builder.Services.AddScoped<ICustomerService, CustomerService>();
 builder.Services.AddScoped<IInvoiceRowService, InvoiceRowService>();
 
+builder.Services.AddFluentValidationAutoValidation();
+builder.Services.AddValidatorsFromAssemblyContaining<Program>();
+
 
 var app = builder.Build();
 
@@ -60,7 +65,16 @@ var app = builder.Build();
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
-    app.UseSwaggerUI();
+    app.UseSwaggerUI(
+        options =>
+        {
+            options.SwaggerEndpoint("/swagger/v1/swagger.json", "TaskFlow API v1");
+            options.RoutePrefix = string.Empty;
+            options.EnableFilter();
+            options.EnableTryItOutByDefault();
+            options.DisplayRequestDuration();
+        }
+        );
     app.MapOpenApi();
 }
 

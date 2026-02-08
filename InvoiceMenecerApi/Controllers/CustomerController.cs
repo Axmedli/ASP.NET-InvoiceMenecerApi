@@ -122,11 +122,27 @@ public class CustomerController : ControllerBase
     /// Retrieves all customers.
     /// </summary>
     /// <returns>List of all customers.</returns>
-    [HttpGet]
+    [HttpGet("all")]
     public async Task<ActionResult<ApiResponse<IEnumerable<CustomerResponseDto>>>> GetAllCustomers()
     {
         var customers = await _customerService.GetAllCustomersAsync();
         return Ok(ApiResponse<IEnumerable<CustomerResponseDto>>
             .SuccessResponse(customers));
+    }
+
+    /// <summary>
+    /// Retrieves a paginated list of customers based on the provided query parameters.
+    /// Supports paging, sorting, filtering by name/email/phone, and global searching.
+    /// </summary>
+    /// <param name="queryParams">The parameters for paging, sorting, filtering and searching customers (Page, Size, Sort, SortDirection, Name, Email, PhoneNumber, Search).</param>
+    /// <returns>An ApiResponse containing a PagedResult of CustomerResponseDto with items and paging metadata.</returns>
+    /// <response code="200">Returns the paged list of customers.</response>
+    [HttpGet]
+    public async Task<ActionResult<ApiResponse<PagedResult<CustomerResponseDto>>>> GetAllCustomersPaged(
+        [FromQuery] CustomerQueryParams queryParams)
+    {
+        var result = await _customerService.GetAllCustomersPagedAsync(queryParams);
+        return Ok(ApiResponse<PagedResult<CustomerResponseDto>>
+            .SuccessResponse(result));
     }
 }

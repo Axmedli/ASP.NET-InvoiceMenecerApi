@@ -3,16 +3,44 @@
   "WorkspaceRootPath": "C:\\Users\\Murad\\Desktop\\InvoiceMenecerApi\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{CA2791EC-1866-4E3F-A6BC-851F1CBBCAB1}|InvoiceMenecerApi\\InvoiceMenecerApi.csproj|c:\\users\\murad\\desktop\\invoicemenecerapi\\invoicemenecerapi\\controllers\\invoicecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CA2791EC-1866-4E3F-A6BC-851F1CBBCAB1}|InvoiceMenecerApi\\InvoiceMenecerApi.csproj|solutionrelative:invoicemenecerapi\\controllers\\invoicecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CA2791EC-1866-4E3F-A6BC-851F1CBBCAB1}|InvoiceMenecerApi\\InvoiceMenecerApi.csproj|c:\\users\\murad\\desktop\\invoicemenecerapi\\invoicemenecerapi\\mapping\\mappingprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CA2791EC-1866-4E3F-A6BC-851F1CBBCAB1}|InvoiceMenecerApi\\InvoiceMenecerApi.csproj|solutionrelative:invoicemenecerapi\\mapping\\mappingprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{CA2791EC-1866-4E3F-A6BC-851F1CBBCAB1}|InvoiceMenecerApi\\InvoiceMenecerApi.csproj|c:\\users\\murad\\desktop\\invoicemenecerapi\\invoicemenecerapi\\validators\\invoicequeryparamsvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CA2791EC-1866-4E3F-A6BC-851F1CBBCAB1}|InvoiceMenecerApi\\InvoiceMenecerApi.csproj|solutionrelative:invoicemenecerapi\\validators\\invoicequeryparamsvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{CA2791EC-1866-4E3F-A6BC-851F1CBBCAB1}|InvoiceMenecerApi\\InvoiceMenecerApi.csproj|c:\\users\\murad\\desktop\\invoicemenecerapi\\invoicemenecerapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CA2791EC-1866-4E3F-A6BC-851F1CBBCAB1}|InvoiceMenecerApi\\InvoiceMenecerApi.csproj|solutionrelative:invoicemenecerapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CA2791EC-1866-4E3F-A6BC-851F1CBBCAB1}|InvoiceMenecerApi\\InvoiceMenecerApi.csproj|c:\\users\\murad\\desktop\\invoicemenecerapi\\invoicemenecerapi\\invoicemenecerapi.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}",
+      "RelativeMoniker": "D:0:0:{CA2791EC-1866-4E3F-A6BC-851F1CBBCAB1}|InvoiceMenecerApi\\InvoiceMenecerApi.csproj|solutionrelative:invoicemenecerapi\\invoicemenecerapi.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CA2791EC-1866-4E3F-A6BC-851F1CBBCAB1}|InvoiceMenecerApi\\InvoiceMenecerApi.csproj|c:\\users\\murad\\desktop\\invoicemenecerapi\\invoicemenecerapi\\validators\\customerqueryparamsvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CA2791EC-1866-4E3F-A6BC-851F1CBBCAB1}|InvoiceMenecerApi\\InvoiceMenecerApi.csproj|solutionrelative:invoicemenecerapi\\validators\\customerqueryparamsvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CA2791EC-1866-4E3F-A6BC-851F1CBBCAB1}|InvoiceMenecerApi\\InvoiceMenecerApi.csproj|c:\\users\\murad\\desktop\\invoicemenecerapi\\invoicemenecerapi\\validators\\changeinvoicestatusdtovalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CA2791EC-1866-4E3F-A6BC-851F1CBBCAB1}|InvoiceMenecerApi\\InvoiceMenecerApi.csproj|solutionrelative:invoicemenecerapi\\validators\\changeinvoicestatusdtovalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CA2791EC-1866-4E3F-A6BC-851F1CBBCAB1}|InvoiceMenecerApi\\InvoiceMenecerApi.csproj|c:\\users\\murad\\desktop\\invoicemenecerapi\\invoicemenecerapi\\validators\\createinvoicerowdtovalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CA2791EC-1866-4E3F-A6BC-851F1CBBCAB1}|InvoiceMenecerApi\\InvoiceMenecerApi.csproj|solutionrelative:invoicemenecerapi\\validators\\createinvoicerowdtovalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CA2791EC-1866-4E3F-A6BC-851F1CBBCAB1}|InvoiceMenecerApi\\InvoiceMenecerApi.csproj|c:\\users\\murad\\desktop\\invoicemenecerapi\\invoicemenecerapi\\validators\\updateinvoicedtovalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CA2791EC-1866-4E3F-A6BC-851F1CBBCAB1}|InvoiceMenecerApi\\InvoiceMenecerApi.csproj|solutionrelative:invoicemenecerapi\\validators\\updateinvoicedtovalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CA2791EC-1866-4E3F-A6BC-851F1CBBCAB1}|InvoiceMenecerApi\\InvoiceMenecerApi.csproj|c:\\users\\murad\\desktop\\invoicemenecerapi\\invoicemenecerapi\\validators\\updatecustomerdtovalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CA2791EC-1866-4E3F-A6BC-851F1CBBCAB1}|InvoiceMenecerApi\\InvoiceMenecerApi.csproj|solutionrelative:invoicemenecerapi\\validators\\updatecustomerdtovalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CA2791EC-1866-4E3F-A6BC-851F1CBBCAB1}|InvoiceMenecerApi\\InvoiceMenecerApi.csproj|c:\\users\\murad\\desktop\\invoicemenecerapi\\invoicemenecerapi\\validators\\createinvoicedtovalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CA2791EC-1866-4E3F-A6BC-851F1CBBCAB1}|InvoiceMenecerApi\\InvoiceMenecerApi.csproj|solutionrelative:invoicemenecerapi\\validators\\createinvoicedtovalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CA2791EC-1866-4E3F-A6BC-851F1CBBCAB1}|InvoiceMenecerApi\\InvoiceMenecerApi.csproj|c:\\users\\murad\\desktop\\invoicemenecerapi\\invoicemenecerapi\\validators\\createcustomerdtovalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CA2791EC-1866-4E3F-A6BC-851F1CBBCAB1}|InvoiceMenecerApi\\InvoiceMenecerApi.csproj|solutionrelative:invoicemenecerapi\\validators\\createcustomerdtovalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,45 +50,140 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 3,
           "Children": [
             {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "InvoiceController.cs",
-              "DocumentMoniker": "C:\\Users\\Murad\\Desktop\\InvoiceMenecerApi\\InvoiceMenecerApi\\Controllers\\InvoiceController.cs",
-              "RelativeDocumentMoniker": "InvoiceMenecerApi\\Controllers\\InvoiceController.cs",
-              "ToolTip": "C:\\Users\\Murad\\Desktop\\InvoiceMenecerApi\\InvoiceMenecerApi\\Controllers\\InvoiceController.cs",
-              "RelativeToolTip": "InvoiceMenecerApi\\Controllers\\InvoiceController.cs",
-              "ViewState": "AgIAAJEAAAAAAAAAAAAwwJsAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-31T21:42:44.298Z",
-              "EditorCaption": ""
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{fbcae063-e2c0-4ab1-a516-996ea3dafb72}"
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "MappingProfile.cs",
-              "DocumentMoniker": "C:\\Users\\Murad\\Desktop\\InvoiceMenecerApi\\InvoiceMenecerApi\\Mapping\\MappingProfile.cs",
-              "RelativeDocumentMoniker": "InvoiceMenecerApi\\Mapping\\MappingProfile.cs",
-              "ToolTip": "C:\\Users\\Murad\\Desktop\\InvoiceMenecerApi\\InvoiceMenecerApi\\Mapping\\MappingProfile.cs",
-              "RelativeToolTip": "InvoiceMenecerApi\\Mapping\\MappingProfile.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-31T21:36:10.507Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\Murad\\Desktop\\InvoiceMenecerApi\\InvoiceMenecerApi\\Program.cs",
               "RelativeDocumentMoniker": "InvoiceMenecerApi\\Program.cs",
               "ToolTip": "C:\\Users\\Murad\\Desktop\\InvoiceMenecerApi\\InvoiceMenecerApi\\Program.cs",
               "RelativeToolTip": "InvoiceMenecerApi\\Program.cs",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAACwAAAAAAAAAAAAAADsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-31T21:33:31.36Z",
+              "WhenOpened": "2026-02-08T17:13:14.884Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "InvoiceMenecerApi.http",
+              "DocumentMoniker": "C:\\Users\\Murad\\Desktop\\InvoiceMenecerApi\\InvoiceMenecerApi\\InvoiceMenecerApi.http",
+              "RelativeDocumentMoniker": "InvoiceMenecerApi\\InvoiceMenecerApi.http",
+              "ToolTip": "C:\\Users\\Murad\\Desktop\\InvoiceMenecerApi\\InvoiceMenecerApi\\InvoiceMenecerApi.http",
+              "RelativeToolTip": "InvoiceMenecerApi\\InvoiceMenecerApi.http",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003502|",
+              "WhenOpened": "2026-02-08T17:13:14.447Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "InvoiceQueryParamsValidator.cs",
+              "DocumentMoniker": "C:\\Users\\Murad\\Desktop\\InvoiceMenecerApi\\InvoiceMenecerApi\\Validators\\InvoiceQueryParamsValidator.cs",
+              "RelativeDocumentMoniker": "InvoiceMenecerApi\\Validators\\InvoiceQueryParamsValidator.cs",
+              "ToolTip": "C:\\Users\\Murad\\Desktop\\InvoiceMenecerApi\\InvoiceMenecerApi\\Validators\\InvoiceQueryParamsValidator.cs",
+              "RelativeToolTip": "InvoiceMenecerApi\\Validators\\InvoiceQueryParamsValidator.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAuwCEAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-08T17:12:52.378Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "CustomerQueryParamsValidator.cs",
+              "DocumentMoniker": "C:\\Users\\Murad\\Desktop\\InvoiceMenecerApi\\InvoiceMenecerApi\\Validators\\CustomerQueryParamsValidator.cs",
+              "RelativeDocumentMoniker": "InvoiceMenecerApi\\Validators\\CustomerQueryParamsValidator.cs",
+              "ToolTip": "C:\\Users\\Murad\\Desktop\\InvoiceMenecerApi\\InvoiceMenecerApi\\Validators\\CustomerQueryParamsValidator.cs",
+              "RelativeToolTip": "InvoiceMenecerApi\\Validators\\CustomerQueryParamsValidator.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAxwBsAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-08T17:12:31.006Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ChangeInvoiceStatusDtoValidator.cs",
+              "DocumentMoniker": "C:\\Users\\Murad\\Desktop\\InvoiceMenecerApi\\InvoiceMenecerApi\\Validators\\ChangeInvoiceStatusDtoValidator.cs",
+              "RelativeDocumentMoniker": "InvoiceMenecerApi\\Validators\\ChangeInvoiceStatusDtoValidator.cs",
+              "ToolTip": "C:\\Users\\Murad\\Desktop\\InvoiceMenecerApi\\InvoiceMenecerApi\\Validators\\ChangeInvoiceStatusDtoValidator.cs",
+              "RelativeToolTip": "InvoiceMenecerApi\\Validators\\ChangeInvoiceStatusDtoValidator.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-08T17:12:10.302Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "CreateInvoiceRowDtoValidator.cs",
+              "DocumentMoniker": "C:\\Users\\Murad\\Desktop\\InvoiceMenecerApi\\InvoiceMenecerApi\\Validators\\CreateInvoiceRowDtoValidator.cs",
+              "RelativeDocumentMoniker": "InvoiceMenecerApi\\Validators\\CreateInvoiceRowDtoValidator.cs",
+              "ToolTip": "C:\\Users\\Murad\\Desktop\\InvoiceMenecerApi\\InvoiceMenecerApi\\Validators\\CreateInvoiceRowDtoValidator.cs",
+              "RelativeToolTip": "InvoiceMenecerApi\\Validators\\CreateInvoiceRowDtoValidator.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-08T17:11:48.072Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "UpdateInvoiceDtoValidator.cs",
+              "DocumentMoniker": "C:\\Users\\Murad\\Desktop\\InvoiceMenecerApi\\InvoiceMenecerApi\\Validators\\UpdateInvoiceDtoValidator.cs",
+              "RelativeDocumentMoniker": "InvoiceMenecerApi\\Validators\\UpdateInvoiceDtoValidator.cs",
+              "ToolTip": "C:\\Users\\Murad\\Desktop\\InvoiceMenecerApi\\InvoiceMenecerApi\\Validators\\UpdateInvoiceDtoValidator.cs",
+              "RelativeToolTip": "InvoiceMenecerApi\\Validators\\UpdateInvoiceDtoValidator.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABcAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-08T17:09:26.109Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "CreateInvoiceDtoValidator.cs",
+              "DocumentMoniker": "C:\\Users\\Murad\\Desktop\\InvoiceMenecerApi\\InvoiceMenecerApi\\Validators\\CreateInvoiceDtoValidator.cs",
+              "RelativeDocumentMoniker": "InvoiceMenecerApi\\Validators\\CreateInvoiceDtoValidator.cs",
+              "ToolTip": "C:\\Users\\Murad\\Desktop\\InvoiceMenecerApi\\InvoiceMenecerApi\\Validators\\CreateInvoiceDtoValidator.cs",
+              "RelativeToolTip": "InvoiceMenecerApi\\Validators\\CreateInvoiceDtoValidator.cs",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAQwBwAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-08T17:08:59.42Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "UpdateCustomerDtoValidator.cs",
+              "DocumentMoniker": "C:\\Users\\Murad\\Desktop\\InvoiceMenecerApi\\InvoiceMenecerApi\\Validators\\UpdateCustomerDtoValidator.cs",
+              "RelativeDocumentMoniker": "InvoiceMenecerApi\\Validators\\UpdateCustomerDtoValidator.cs",
+              "ToolTip": "C:\\Users\\Murad\\Desktop\\InvoiceMenecerApi\\InvoiceMenecerApi\\Validators\\UpdateCustomerDtoValidator.cs",
+              "RelativeToolTip": "InvoiceMenecerApi\\Validators\\UpdateCustomerDtoValidator.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAMAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-08T17:08:36Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "CreateCustomerDtoValidator.cs",
+              "DocumentMoniker": "C:\\Users\\Murad\\Desktop\\InvoiceMenecerApi\\InvoiceMenecerApi\\Validators\\CreateCustomerDtoValidator.cs",
+              "RelativeDocumentMoniker": "InvoiceMenecerApi\\Validators\\CreateCustomerDtoValidator.cs",
+              "ToolTip": "C:\\Users\\Murad\\Desktop\\InvoiceMenecerApi\\InvoiceMenecerApi\\Validators\\CreateCustomerDtoValidator.cs",
+              "RelativeToolTip": "InvoiceMenecerApi\\Validators\\CreateCustomerDtoValidator.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-08T17:08:13.495Z",
               "EditorCaption": ""
             }
           ]

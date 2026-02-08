@@ -1,4 +1,5 @@
-﻿using AutoMapper;
+﻿using ASP_NET_08.Common;
+using AutoMapper;
 using InvoiceMenecer.Models;
 using InvoiceMenecerApi.DTOs.InvoiceDto;
 using InvoiceMenecerApi.Services.Interfaces;
@@ -142,5 +143,126 @@ public class InvoiceService : IInvoiceService
 
         await _context.SaveChangesAsync();
         return _mapper.Map<InvoiceResponseDto>(updatedInvoice);
+    }
+
+    public async Task<PagedResult<InvoiceResponseDto>> GetAllInvoicesPagedAsync(InvoiceQueryParams queryParams)
+    {
+        queryParams.Validate();
+
+        var query = _context
+            .Invoices
+            .Include(i => i.Customer)
+            .Include(i => i.Rows)
+            .Where(i => i.DeletedAt == null)
+            .AsQueryable();
+
+        if (!string.IsNullOrWhiteSpace(queryParams.Search))
+        {
+            var searchTerm = queryParams.Search.ToLower();
+            query = query.Where(i =>
+                (i.Comment != null && i.Comment.ToLower().Contains(searchTerm)) ||
+                i.Customer.Name.ToLower().Contains(searchTerm)
+            );
+        }
+
+        if (queryParams.CustomerId.HasValue)
+        {
+            query = query.Where(i => i.CustomerId == queryParams.CustomerId.Value);
+        }
+
+        if (!string.IsNullOrWhiteSpace(queryParams.Status))
+        {
+            if (Enum.TryParse<InvoiceStatus>(queryParams.Status, out var status))
+            {
+                query = query.Where(i => i.Status == status);
+            }
+        }
+
+        if (queryParams.StartDateFrom.HasValue)
+        {
+            query = query.Where(i => i.StartDate >= queryParams.StartDateFrom.Value);
+        }
+        if (queryParams.StartDateTo.HasValue)
+        {
+            query = query.Where(i => i.StartDate <= queryParams.StartDateTo.Value);
+        }
+
+        if (queryParams.EndDateFrom.HasValue)
+        {
+            query = query.Where(i => i.EndDate >= queryParams.EndDateFrom.Value);
+        }
+        if (queryParams.EndDateTo.HasValue)
+        {
+            query = query.Where(i => i.EndDate <= queryParams.EndDateTo.Value);
+        }
+
+        if (queryParams.MinTotalSum.HasValue)
+        {
+            query = query.Where(i => i.TotalSum >= queryParams.MinTotalSum.Value);
+        }
+        if (queryParams.MaxTotalSum.HasValue)
+        {
+            query = query.Where(i => i.TotalSum <= queryParams.MaxTotalSum.Value);
+        }
+
+        var totalCount = await query.CountAsync();
+
+        if (!string.IsNullOrWhiteSpace(queryParams.Sort))
+        {
+            query = ApplySorting(query, queryParams.Sort, queryParams.SortDirection);
+        }
+        else
+        {
+            query = query.OrderByDescending(i => i.CreatedAt);
+        }
+
+        var skip = (queryParams.Page - 1) * queryParams.Size;
+        var invoices = await query
+            .Skip(skip)
+            .Take(queryParams.Size)
+            .ToListAsync();
+
+        var invoiceDtos = _mapper.Map<IEnumerable<InvoiceResponseDto>>(invoices);
+
+        return PagedResult<InvoiceResponseDto>.Create(
+            items: invoiceDtos,
+            page: queryParams.Page,
+            pageSize: queryParams.Size,
+            totalCount: totalCount
+        );
+    }
+
+    private IQueryable<Invoice> ApplySorting(
+        IQueryable<Invoice> query,
+        string sort,
+        string? sortDirection)
+    {
+        var isDescending = sortDirection?.ToLower() == "desc";
+
+        return sort.ToLower() switch
+        {
+            "customerid" => isDescending
+                ? query.OrderByDescending(i => i.CustomerId)
+                : query.OrderBy(i => i.CustomerId),
+            "startdate" => isDescending
+                ? query.OrderByDescending(i => i.StartDate)
+                : query.OrderBy(i => i.StartDate),
+            "enddate" => isDescending
+                ? query.OrderByDescending(i => i.EndDate)
+                : query.OrderBy(i => i.EndDate),
+            "totalsum" => isDescending
+                ? query.OrderByDescending(i => i.TotalSum)
+                : query.OrderBy(i => i.TotalSum),
+            "status" => isDescending
+                ? query.OrderByDescending(i => i.Status)
+                : query.OrderBy(i => i.Status),
+            "createdat" => isDescending
+                ? query.OrderByDescending(i => i.CreatedAt)
+                : query.OrderBy(i => i.CreatedAt),
+            "updatedat" => isDescending
+                ? query.OrderByDescending(i => i.UpdatedAt)
+                : query.OrderBy(i => i.UpdatedAt),
+            _ => query.OrderByDescending(i => i.CreatedAt)
+        };
     }
 }

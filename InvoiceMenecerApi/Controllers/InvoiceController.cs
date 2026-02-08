@@ -125,10 +125,12 @@ public class InvoiceController : ControllerBase
     }
 
     /// <summary>
-    /// Retrieves all invoices.
+    /// Retrieves all invoices without pagination.
+    /// Returns complete list of non-archived invoices.
     /// </summary>
     /// <returns>List of all invoices.</returns>
-    [HttpGet]
+    /// <response code="200">Returns all invoices.</response>
+    [HttpGet("all")]
     public async Task<ActionResult<ApiResponse<IEnumerable<InvoiceResponseDto>>>> GetAllInvoices()
     {
         var invoices = await _invoiceService.GetAllInvoicesAsync();
@@ -166,5 +168,20 @@ public class InvoiceController : ControllerBase
 
         return Ok(ApiResponse<IEnumerable<InvoiceResponseDto>>
             .SuccessResponse(invoices));
+    }
+
+    /// <summary>
+    /// Retrieves a paginated list of invoices based on the provided query parameters.
+    /// Supports paging, sorting, filtering by customer/status/dates/totalsum, and global searching.
+    /// </summary>
+    /// <param name="queryParams">The parameters for paging, sorting, filtering and searching invoices.</param>
+    /// <returns>An ApiResponse containing a PagedResult of InvoiceResponseDto with items and paging metadata.</returns>
+    /// <response code="200">Returns the paged list of invoices.</response>
+    [HttpGet]
+    public async Task<ActionResult<ApiResponse<PagedResult<InvoiceResponseDto>>>> GetAllInvoicesPaged([FromQuery] InvoiceQueryParams queryParams)
+    {
+        var pagedInvoices = await _invoiceService.GetAllInvoicesPagedAsync(queryParams);
+        return Ok(ApiResponse<PagedResult<InvoiceResponseDto>>
+            .SuccessResponse(pagedInvoices));
     }
 }

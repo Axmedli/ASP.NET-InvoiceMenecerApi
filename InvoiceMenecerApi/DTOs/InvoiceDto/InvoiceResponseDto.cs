@@ -45,7 +45,7 @@ public class InvoiceResponseDto
     /// <summary>
     /// Gets or sets the status of the invoice.
     /// </summary>
-    public InvoiceStatus Status { get; set; }
+    public InvoiceStatus Status { get; set; } 
 
     /// <summary>
     /// Gets or sets the creation date and time of the invoice.

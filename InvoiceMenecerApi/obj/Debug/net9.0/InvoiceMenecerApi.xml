@@ -57,6 +57,15 @@
             </summary>
             <returns>List of all customers.</returns>
         </member>
+        <member name="M:InvoiceMenecerApi.Controllers.CustomerController.GetAllCustomersPaged(InvoiceMenecerApi.DTOs.CustomerDto.CustomerQueryParams)">
+            <summary>
+            Retrieves a paginated list of customers based on the provided query parameters.
+            Supports paging, sorting, filtering by name/email/phone, and global searching.
+            </summary>
+            <param name="queryParams">The parameters for paging, sorting, filtering and searching customers (Page, Size, Sort, SortDirection, Name, Email, PhoneNumber, Search).</param>
+            <returns>An ApiResponse containing a PagedResult of CustomerResponseDto with items and paging metadata.</returns>
+            <response code="200">Returns the paged list of customers.</response>
+        </member>
         <member name="T:InvoiceMenecerApi.Controllers.InvoiceController">
             <summary>
             Controller for managing invoices. Provides endpoints for creating, updating, deleting, archiving, 
@@ -108,9 +117,11 @@
         </member>
         <member name="M:InvoiceMenecerApi.Controllers.InvoiceController.GetAllInvoices">
             <summary>
-            Retrieves all invoices.
+            Retrieves all invoices without pagination.
+            Returns complete list of non-archived invoices.
             </summary>
             <returns>List of all invoices.</returns>
+            <response code="200">Returns all invoices.</response>
         </member>
         <member name="M:InvoiceMenecerApi.Controllers.InvoiceController.GetInvoiceById(System.Guid)">
             <summary>
@@ -125,6 +136,15 @@
             </summary>
             <param name="customerId">Customer ID.</param>
             <returns>List of invoices for the customer.</returns>
+        </member>
+        <member name="M:InvoiceMenecerApi.Controllers.InvoiceController.GetAllInvoicesPaged(InvoiceMenecerApi.DTOs.InvoiceDto.InvoiceQueryParams)">
+            <summary>
+            Retrieves a paginated list of invoices based on the provided query parameters.
+            Supports paging, sorting, filtering by customer/status/dates/totalsum, and global searching.
+            </summary>
+            <param name="queryParams">The parameters for paging, sorting, filtering and searching invoices.</param>
+            <returns>An ApiResponse containing a PagedResult of InvoiceResponseDto with items and paging metadata.</returns>
+            <response code="200">Returns the paged list of invoices.</response>
         </member>
         <member name="M:InvoiceMenecerApi.Controllers.InvoiceRowController.GetRowsByInvoiceId(System.Guid)">
             <summary>
@@ -181,6 +201,56 @@
         <member name="P:InvoiceMenecerApi.DTOs.CustomerDto.CreateCustomerDto.PhoneNumber">
             <summary>
             Gets or sets the customer's phone number.
+            </summary>
+        </member>
+        <member name="T:InvoiceMenecerApi.DTOs.CustomerDto.CustomerQueryParams">
+            <summary>
+            Represents query parameters for filtering and paginating customer data.
+            </summary>
+        </member>
+        <member name="P:InvoiceMenecerApi.DTOs.CustomerDto.CustomerQueryParams.Page">
+            <summary>
+            The page number for pagination. Default is 1.
+            </summary>
+        </member>
+        <member name="P:InvoiceMenecerApi.DTOs.CustomerDto.CustomerQueryParams.Size">
+            <summary>
+            The number of items per page. Default is 10.
+            </summary>
+        </member>
+        <member name="P:InvoiceMenecerApi.DTOs.CustomerDto.CustomerQueryParams.Sort">
+            <summary>
+            The field to sort by (Name, Email, CreatedAt, UpdatedAt). Default is "Name".
+            </summary>
+        </member>
+        <member name="P:InvoiceMenecerApi.DTOs.CustomerDto.CustomerQueryParams.SortDirection">
+            <summary>
+            The direction of sorting ("asc" or "desc"). Default is "asc".
+            </summary>
+        </member>
+        <member name="P:InvoiceMenecerApi.DTOs.CustomerDto.CustomerQueryParams.Name">
+            <summary>
+            Filter by customer name (partial match).
+            </summary>
+        </member>
+        <member name="P:InvoiceMenecerApi.DTOs.CustomerDto.CustomerQueryParams.Email">
+            <summary>
+            Filter by customer email (partial match).
+            </summary>
+        </member>
+        <member name="P:InvoiceMenecerApi.DTOs.CustomerDto.CustomerQueryParams.PhoneNumber">
+            <summary>
+            Filter by customer phone number (partial match).
+            </summary>
+        </member>
+        <member name="P:InvoiceMenecerApi.DTOs.CustomerDto.CustomerQueryParams.Search">
+            <summary>
+            The search keyword for filtering customers (searches in Name, Email, PhoneNumber).
+            </summary>
+        </member>
+        <member name="M:InvoiceMenecerApi.DTOs.CustomerDto.CustomerQueryParams.Validate">
+            <summary>
+            Validates and normalizes the query parameters.
             </summary>
         </member>
         <member name="T:InvoiceMenecerApi.DTOs.CustomerDto.CustomerResponseDto">
@@ -281,6 +351,81 @@
         <member name="P:InvoiceMenecerApi.DTOs.InvoiceDto.CreateInvoiceDto.Comment">
             <summary>
             Gets or sets an optional comment for the invoice.
+            </summary>
+        </member>
+        <member name="T:InvoiceMenecerApi.DTOs.InvoiceDto.InvoiceQueryParams">
+            <summary>
+            Represents query parameters for filtering and paginating invoice data.
+            </summary>
+        </member>
+        <member name="P:InvoiceMenecerApi.DTOs.InvoiceDto.InvoiceQueryParams.Page">
+            <summary>
+            The page number for pagination. Default is 1.
+            </summary>
+        </member>
+        <member name="P:InvoiceMenecerApi.DTOs.InvoiceDto.InvoiceQueryParams.Size">
+            <summary>
+            The number of items per page. Default is 10.
+            </summary>
+        </member>
+        <member name="P:InvoiceMenecerApi.DTOs.InvoiceDto.InvoiceQueryParams.Sort">
+            <summary>
+            The field to sort by (CustomerId, StartDate, EndDate, TotalSum, Status, CreatedAt, UpdatedAt). Default is "CreatedAt".
+            </summary>
+        </member>
+        <member name="P:InvoiceMenecerApi.DTOs.InvoiceDto.InvoiceQueryParams.SortDirection">
+            <summary>
+            The direction of sorting ("asc" or "desc"). Default is "desc".
+            </summary>
+        </member>
+        <member name="P:InvoiceMenecerApi.DTOs.InvoiceDto.InvoiceQueryParams.CustomerId">
+            <summary>
+            Filter by customer ID.
+            </summary>
+        </member>
+        <member name="P:InvoiceMenecerApi.DTOs.InvoiceDto.InvoiceQueryParams.Status">
+            <summary>
+            Filter by invoice status (Created, Sent, Received, Paid, Cancelled, Rejected).
+            </summary>
+        </member>
+        <member name="P:InvoiceMenecerApi.DTOs.InvoiceDto.InvoiceQueryParams.StartDateFrom">
+            <summary>
+            Filter by start date (from).
+            </summary>
+        </member>
+        <member name="P:InvoiceMenecerApi.DTOs.InvoiceDto.InvoiceQueryParams.StartDateTo">
+            <summary>
+            Filter by start date (to).
+            </summary>
+        </member>
+        <member name="P:InvoiceMenecerApi.DTOs.InvoiceDto.InvoiceQueryParams.EndDateFrom">
+            <summary>
+            Filter by end date (from).
+            </summary>
+        </member>
+        <member name="P:InvoiceMenecerApi.DTOs.InvoiceDto.InvoiceQueryParams.EndDateTo">
+            <summary>
+            Filter by end date (to).
+            </summary>
+        </member>
+        <member name="P:InvoiceMenecerApi.DTOs.InvoiceDto.InvoiceQueryParams.MinTotalSum">
+            <summary>
+            Filter by minimum total sum.
+            </summary>
+        </member>
+        <member name="P:InvoiceMenecerApi.DTOs.InvoiceDto.InvoiceQueryParams.MaxTotalSum">
+            <summary>
+            Filter by maximum total sum.
+            </summary>
+        </member>
+        <member name="P:InvoiceMenecerApi.DTOs.InvoiceDto.InvoiceQueryParams.Search">
+            <summary>
+            The search keyword for filtering invoices (searches in Comment, Customer Name).
+            </summary>
+        </member>
+        <member name="M:InvoiceMenecerApi.DTOs.InvoiceDto.InvoiceQueryParams.Validate">
+            <summary>
+            Validates and normalizes the query parameters.
             </summary>
         </member>
         <member name="T:InvoiceMenecerApi.DTOs.InvoiceDto.InvoiceResponseDto">
