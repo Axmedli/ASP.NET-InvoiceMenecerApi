@@ -116,8 +116,6 @@ public class AuthService : IAuthService
         return newTokens;
 
     }
-
-
     public async Task RevokeRefreshTokenAsync(RefreshTokenRequest refreshTokenRequest)
     {
         string? jti;
@@ -188,7 +186,8 @@ public class AuthService : IAuthService
             throw new UnauthorizedAccessException("Invalid password");
 
         var result = await _userManager.DeleteAsync(user);
-
+        
+      
         return result.Succeeded;
     }
 
