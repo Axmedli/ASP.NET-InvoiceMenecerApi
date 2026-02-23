@@ -1,4 +1,4 @@
-﻿namespace ASP_NET_08.Common;
+﻿namespace InvoiceMenecerApi.Common;
 
 public class ApiResponse<T>
 {

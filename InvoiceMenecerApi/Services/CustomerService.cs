@@ -1,6 +1,6 @@
-﻿using ASP_NET_08.Common;
+﻿using InvoiceMenecerApi.Common;
 using AutoMapper;
-using InvoiceMenecer.Models;
+using InvoiceMenecerApi.Models;
 using InvoiceMenecerApi.DTOs.CustomerDto;
 using InvoiceMenecerApi.Services.Interfaces;
 using Microsoft.EntityFrameworkCore;
@@ -43,7 +43,7 @@ public class CustomerService : ICustomerService
         return _mapper.Map<IEnumerable<CustomerResponseDto>>(customer);
     }
 
-    public async Task<CustomerResponseDto> GetCustomerByIdAsync(Guid customerId)
+    public async Task<CustomerResponseDto?> GetCustomerByIdAsync(Guid customerId)
     {
         var customer = await _context
             .Customers
@@ -96,7 +96,7 @@ public class CustomerService : ICustomerService
                                 .Include(c => c.Invoices)
                                 .FirstOrDefaultAsync(c => c.Id == customerId && c.DeletedAt == null);
 
-        if (updatedCustomer is null) return null;
+        if (updatedCustomer is null) return null!;
 
         _mapper.Map(updateCustomerDto, updatedCustomer);
         updatedCustomer.UpdatedAt = DateTimeOffset.UtcNow;

@@ -156,7 +156,6 @@ C:\Users\Murad\Desktop\InvoiceMenecerApi\InvoiceMenecerApi\obj\Debug\net9.0\stat
 C:\Users\Murad\Desktop\InvoiceMenecerApi\InvoiceMenecerApi\obj\Debug\net9.0\staticwebassets.development.json
 C:\Users\Murad\Desktop\InvoiceMenecerApi\InvoiceMenecerApi\obj\Debug\net9.0\staticwebassets.build.endpoints.json
 C:\Users\Murad\Desktop\InvoiceMenecerApi\InvoiceMenecerApi\obj\Debug\net9.0\swae.build.ex.cache
-C:\Users\Murad\Desktop\InvoiceMenecerApi\InvoiceMenecerApi\obj\Debug\net9.0\staticwebassets.upToDateCheck.txt
 C:\Users\Murad\Desktop\InvoiceMenecerApi\InvoiceMenecerApi\obj\Debug\net9.0\InvoiceM.D0A8AFF2.Up2Date
 C:\Users\Murad\Desktop\InvoiceMenecerApi\InvoiceMenecerApi\obj\Debug\net9.0\InvoiceMenecerApi.dll
 C:\Users\Murad\Desktop\InvoiceMenecerApi\InvoiceMenecerApi\obj\Debug\net9.0\refint\InvoiceMenecerApi.dll
@@ -166,3 +165,4 @@ C:\Users\Murad\Desktop\InvoiceMenecerApi\InvoiceMenecerApi\obj\Debug\net9.0\Invo
 C:\Users\Murad\Desktop\InvoiceMenecerApi\InvoiceMenecerApi\obj\Debug\net9.0\ref\InvoiceMenecerApi.dll
 C:\Users\Murad\Desktop\InvoiceMenecerApi\InvoiceMenecerApi\bin\Debug\net9.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
 C:\Users\Murad\Desktop\InvoiceMenecerApi\InvoiceMenecerApi\bin\Debug\net9.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+C:\Users\Murad\Desktop\InvoiceMenecerApi\InvoiceMenecerApi\obj\Debug\net9.0\staticwebassets.upToDateCheck.txt

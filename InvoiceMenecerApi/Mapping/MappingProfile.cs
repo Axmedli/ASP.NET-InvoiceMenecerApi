@@ -1,9 +1,9 @@
 ﻿using AutoMapper;
-using InvoiceMenecer.Models;
+using InvoiceMenecerApi.Models;
 using InvoiceMenecerApi.DTOs.CustomerDto;
 using InvoiceMenecerApi.DTOs.InvoiceDto;
 
-namespace ASP_NET_08.Mapping;
+namespace InvoiceMenecerApi.Mapping;
 
 public class MappingProfile : Profile
 {

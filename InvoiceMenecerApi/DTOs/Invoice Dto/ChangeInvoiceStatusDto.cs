@@ -1,4 +1,4 @@
-﻿using InvoiceMenecer.Models;
+﻿using InvoiceMenecerApi.Models;
 
 namespace InvoiceMenecerApi.DTOs.InvoiceDto;
 

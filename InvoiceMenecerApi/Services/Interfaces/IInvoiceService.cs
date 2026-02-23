@@ -1,5 +1,5 @@
-﻿using ASP_NET_08.Common;
-using InvoiceMenecer.Models;
+﻿using InvoiceMenecerApi.Common;
+using InvoiceMenecerApi.Models;
 using InvoiceMenecerApi.DTOs.InvoiceDto;
 
 namespace InvoiceMenecerApi.Services.Interfaces;

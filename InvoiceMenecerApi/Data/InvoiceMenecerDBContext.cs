@@ -1,7 +1,8 @@
-﻿using InvoiceMenecer.Models;
+﻿using InvoiceMenecerApi.Models;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
-public class InvoiceMenecerDBContext : DbContext
+public class InvoiceMenecerDBContext : IdentityDbContext<ApplicationUser>
 {
     public InvoiceMenecerDBContext(DbContextOptions<InvoiceMenecerDBContext> options)
         : base(options)
@@ -11,6 +12,7 @@ public class InvoiceMenecerDBContext : DbContext
     public DbSet<Customer> Customers => Set<Customer>();
     public DbSet<Invoice> Invoices => Set<Invoice>();
     public DbSet<InvoiceRow> InvoiceRows => Set<InvoiceRow>();
+    public DbSet<RefreshToken> RefreshTokens => Set<RefreshToken>();
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {

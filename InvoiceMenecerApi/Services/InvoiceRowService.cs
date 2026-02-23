@@ -1,5 +1,5 @@
 ﻿using AutoMapper;
-using InvoiceMenecer.Models;
+using InvoiceMenecerApi.Models;
 using InvoiceMenecerApi.DTOs.InvoiceDto;
 using InvoiceMenecerApi.Services.Interfaces;
 using Microsoft.EntityFrameworkCore;
@@ -45,11 +45,11 @@ public class InvoiceRowService : IInvoiceRowService
             .FirstOrDefaultAsync(i => i.Id == invoiceId && i.DeletedAt == null);
 
         if (invoice == null)
-            return null;
+            return null!;
 
         // Yalnız göndərilməmiş invoice-lara row əlavə et
         if (invoice.Status != InvoiceStatus.Created)
-            return null;
+            return null!;
 
         // Yeni row yarat
         var row = _mapper.Map<InvoiceRow>(createRowDto);
@@ -74,11 +74,11 @@ public class InvoiceRowService : IInvoiceRowService
             .FirstOrDefaultAsync(r => r.Id == rowId);
 
         if (row == null)
-            return null;
+            return null!;
 
         // Yalnız göndərilməmiş invoice-ların row-larını yenilə
         if (row.Invoice.Status != InvoiceStatus.Created || row.Invoice.DeletedAt != null)
-            return null;
+            return null!;
 
         var oldSum = row.Sum;
 

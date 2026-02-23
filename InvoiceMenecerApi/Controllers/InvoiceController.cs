@@ -1,7 +1,8 @@
-﻿using ASP_NET_08.Common;
-using InvoiceMenecer.Models;
+﻿using InvoiceMenecerApi.Common;
 using InvoiceMenecerApi.DTOs.InvoiceDto;
+using InvoiceMenecerApi.Models;
 using InvoiceMenecerApi.Services.Interfaces;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -13,6 +14,7 @@ namespace InvoiceMenecerApi.Controllers;
 /// </summary>
 [Route("api/[controller]")]
 [ApiController]
+[Authorize(Policy = "UserOrAbove")]
 public class InvoiceController : ControllerBase
 {
     private readonly IInvoiceService _invoiceService;

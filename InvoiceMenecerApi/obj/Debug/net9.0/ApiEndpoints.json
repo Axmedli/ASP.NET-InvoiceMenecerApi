@@ -1,5 +1,167 @@
 [
   {
+    "ContainingType": "InvoiceMenecerApi.Controllers.AuthController",
+    "Method": "DeleteAccount",
+    "RelativePath": "api/Auth/delete-account",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "deletePasswordRequest",
+        "Type": "InvoiceMenecerApi.DTOs.DeletePasswordRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "InvoiceMenecerApi.Controllers.AuthController",
+    "Method": "EditProfile",
+    "RelativePath": "api/Auth/edit-profile",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "editProfileRequest",
+        "Type": "InvoiceMenecerApi.DTOs.EditProfileRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "InvoiceMenecerApi.DTOs.AuthResponseDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "InvoiceMenecerApi.Controllers.AuthController",
+    "Method": "Login",
+    "RelativePath": "api/Auth/login",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "loginRequest",
+        "Type": "InvoiceMenecerApi.DTOs.LoginRequestDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "InvoiceMenecerApi.Common.ApiResponse\u00601[[InvoiceMenecerApi.DTOs.AuthResponseDto, InvoiceMenecerApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "InvoiceMenecerApi.Controllers.AuthController",
+    "Method": "Refresh",
+    "RelativePath": "api/Auth/refresh",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "refreshTokenRequest",
+        "Type": "InvoiceMenecerApi.DTOs.RefreshTokenRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "InvoiceMenecerApi.Common.ApiResponse\u00601[[InvoiceMenecerApi.DTOs.AuthResponseDto, InvoiceMenecerApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "InvoiceMenecerApi.Controllers.AuthController",
+    "Method": "Register",
+    "RelativePath": "api/Auth/register",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "registerRequest",
+        "Type": "InvoiceMenecerApi.DTOs.RegisterRequestDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "InvoiceMenecerApi.Common.ApiResponse\u00601[[InvoiceMenecerApi.DTOs.AuthResponseDto, InvoiceMenecerApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "InvoiceMenecerApi.Controllers.AuthController",
+    "Method": "Revoke",
+    "RelativePath": "api/Auth/revoke",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "refreshTokenRequest",
+        "Type": "InvoiceMenecerApi.DTOs.RefreshTokenRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "InvoiceMenecerApi.Controllers.AuthController",
+    "Method": "UpdatePassword",
+    "RelativePath": "api/Auth/update-password",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "updatePasswordRequest",
+        "Type": "InvoiceMenecerApi.DTOs.UpdatePasswordRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "InvoiceMenecerApi.DTOs.AuthResponseDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
     "ContainingType": "InvoiceMenecerApi.Controllers.CustomerController",
     "Method": "CreateCustomer",
     "RelativePath": "api/Customer",
@@ -15,7 +177,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "ASP_NET_08.Common.ApiResponse\u00601[[InvoiceMenecerApi.DTOs.CustomerDto.CustomerResponseDto, InvoiceMenecerApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "InvoiceMenecerApi.Common.ApiResponse\u00601[[InvoiceMenecerApi.DTOs.CustomerDto.CustomerResponseDto, InvoiceMenecerApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -76,7 +238,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "ASP_NET_08.Common.ApiResponse\u00601[[ASP_NET_08.Common.PagedResult\u00601[[InvoiceMenecerApi.DTOs.CustomerDto.CustomerResponseDto, InvoiceMenecerApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], InvoiceMenecerApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "InvoiceMenecerApi.Common.ApiResponse\u00601[[InvoiceMenecerApi.Common.PagedResult\u00601[[InvoiceMenecerApi.DTOs.CustomerDto.CustomerResponseDto, InvoiceMenecerApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], InvoiceMenecerApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -107,7 +269,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "ASP_NET_08.Common.ApiResponse\u00601[[InvoiceMenecerApi.DTOs.CustomerDto.CustomerResponseDto, InvoiceMenecerApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "InvoiceMenecerApi.Common.ApiResponse\u00601[[InvoiceMenecerApi.DTOs.CustomerDto.CustomerResponseDto, InvoiceMenecerApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -133,7 +295,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "ASP_NET_08.Common.ApiResponse\u00601[[System.String, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "Type": "InvoiceMenecerApi.Common.ApiResponse\u00601[[System.String, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -159,7 +321,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "ASP_NET_08.Common.ApiResponse\u00601[[InvoiceMenecerApi.DTOs.CustomerDto.CustomerResponseDto, InvoiceMenecerApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "InvoiceMenecerApi.Common.ApiResponse\u00601[[InvoiceMenecerApi.DTOs.CustomerDto.CustomerResponseDto, InvoiceMenecerApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -185,7 +347,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "ASP_NET_08.Common.ApiResponse\u00601[[System.String, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "Type": "InvoiceMenecerApi.Common.ApiResponse\u00601[[System.String, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -205,7 +367,7 @@
     "Parameters": [],
     "ReturnTypes": [
       {
-        "Type": "ASP_NET_08.Common.ApiResponse\u00601[[System.Collections.Generic.IEnumerable\u00601[[InvoiceMenecerApi.DTOs.CustomerDto.CustomerResponseDto, InvoiceMenecerApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "Type": "InvoiceMenecerApi.Common.ApiResponse\u00601[[System.Collections.Generic.IEnumerable\u00601[[InvoiceMenecerApi.DTOs.CustomerDto.CustomerResponseDto, InvoiceMenecerApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -231,7 +393,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "ASP_NET_08.Common.ApiResponse\u00601[[InvoiceMenecerApi.DTOs.InvoiceDto.InvoiceResponseDto, InvoiceMenecerApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "InvoiceMenecerApi.Common.ApiResponse\u00601[[InvoiceMenecerApi.DTOs.InvoiceDto.InvoiceResponseDto, InvoiceMenecerApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -317,7 +479,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "ASP_NET_08.Common.ApiResponse\u00601[[ASP_NET_08.Common.PagedResult\u00601[[InvoiceMenecerApi.DTOs.InvoiceDto.InvoiceResponseDto, InvoiceMenecerApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], InvoiceMenecerApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "InvoiceMenecerApi.Common.ApiResponse\u00601[[InvoiceMenecerApi.Common.PagedResult\u00601[[InvoiceMenecerApi.DTOs.InvoiceDto.InvoiceResponseDto, InvoiceMenecerApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], InvoiceMenecerApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -348,7 +510,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "ASP_NET_08.Common.ApiResponse\u00601[[InvoiceMenecerApi.DTOs.InvoiceDto.InvoiceResponseDto, InvoiceMenecerApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "InvoiceMenecerApi.Common.ApiResponse\u00601[[InvoiceMenecerApi.DTOs.InvoiceDto.InvoiceResponseDto, InvoiceMenecerApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -374,7 +536,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "ASP_NET_08.Common.ApiResponse\u00601[[System.Boolean, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "Type": "InvoiceMenecerApi.Common.ApiResponse\u00601[[System.Boolean, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -400,7 +562,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "ASP_NET_08.Common.ApiResponse\u00601[[InvoiceMenecerApi.DTOs.InvoiceDto.InvoiceResponseDto, InvoiceMenecerApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "InvoiceMenecerApi.Common.ApiResponse\u00601[[InvoiceMenecerApi.DTOs.InvoiceDto.InvoiceResponseDto, InvoiceMenecerApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -426,7 +588,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "ASP_NET_08.Common.ApiResponse\u00601[[System.Boolean, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "Type": "InvoiceMenecerApi.Common.ApiResponse\u00601[[System.Boolean, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -457,7 +619,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "ASP_NET_08.Common.ApiResponse\u00601[[InvoiceMenecerApi.DTOs.InvoiceDto.InvoiceResponseDto, InvoiceMenecerApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "InvoiceMenecerApi.Common.ApiResponse\u00601[[InvoiceMenecerApi.DTOs.InvoiceDto.InvoiceResponseDto, InvoiceMenecerApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -477,7 +639,7 @@
     "Parameters": [],
     "ReturnTypes": [
       {
-        "Type": "ASP_NET_08.Common.ApiResponse\u00601[[System.Collections.Generic.IEnumerable\u00601[[InvoiceMenecerApi.DTOs.InvoiceDto.InvoiceResponseDto, InvoiceMenecerApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "Type": "InvoiceMenecerApi.Common.ApiResponse\u00601[[System.Collections.Generic.IEnumerable\u00601[[InvoiceMenecerApi.DTOs.InvoiceDto.InvoiceResponseDto, InvoiceMenecerApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -503,7 +665,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "ASP_NET_08.Common.ApiResponse\u00601[[System.Collections.Generic.IEnumerable\u00601[[InvoiceMenecerApi.DTOs.InvoiceDto.InvoiceResponseDto, InvoiceMenecerApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "Type": "InvoiceMenecerApi.Common.ApiResponse\u00601[[System.Collections.Generic.IEnumerable\u00601[[InvoiceMenecerApi.DTOs.InvoiceDto.InvoiceResponseDto, InvoiceMenecerApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -529,7 +691,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "ASP_NET_08.Common.ApiResponse\u00601[[InvoiceMenecerApi.DTOs.InvoiceDto.InvoiceRowDto, InvoiceMenecerApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "InvoiceMenecerApi.Common.ApiResponse\u00601[[InvoiceMenecerApi.DTOs.InvoiceDto.InvoiceRowDto, InvoiceMenecerApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -560,7 +722,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "ASP_NET_08.Common.ApiResponse\u00601[[InvoiceMenecerApi.DTOs.InvoiceDto.InvoiceRowDto, InvoiceMenecerApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "InvoiceMenecerApi.Common.ApiResponse\u00601[[InvoiceMenecerApi.DTOs.InvoiceDto.InvoiceRowDto, InvoiceMenecerApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -586,7 +748,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "ASP_NET_08.Common.ApiResponse\u00601[[System.String, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "Type": "InvoiceMenecerApi.Common.ApiResponse\u00601[[System.String, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -612,7 +774,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "ASP_NET_08.Common.ApiResponse\u00601[[System.Collections.Generic.IEnumerable\u00601[[InvoiceMenecerApi.DTOs.InvoiceDto.InvoiceRowDto, InvoiceMenecerApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "Type": "InvoiceMenecerApi.Common.ApiResponse\u00601[[System.Collections.Generic.IEnumerable\u00601[[InvoiceMenecerApi.DTOs.InvoiceDto.InvoiceRowDto, InvoiceMenecerApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -643,7 +805,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "ASP_NET_08.Common.ApiResponse\u00601[[InvoiceMenecerApi.DTOs.InvoiceDto.InvoiceRowDto, InvoiceMenecerApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "InvoiceMenecerApi.Common.ApiResponse\u00601[[InvoiceMenecerApi.DTOs.InvoiceDto.InvoiceRowDto, InvoiceMenecerApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain",
           "application/json",

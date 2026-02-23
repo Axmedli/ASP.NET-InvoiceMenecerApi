@@ -24,7 +24,7 @@ namespace InvoiceMenecerApi.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
-            modelBuilder.Entity("InvoiceMenecer.Models.Customer", b =>
+            modelBuilder.Entity("InvoiceMenecerApi.Models.Customer", b =>
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
@@ -62,7 +62,7 @@ namespace InvoiceMenecerApi.Migrations
                     b.ToTable("Customers");
                 });
 
-            modelBuilder.Entity("InvoiceMenecer.Models.Invoice", b =>
+            modelBuilder.Entity("InvoiceMenecerApi.Models.Invoice", b =>
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
@@ -105,7 +105,7 @@ namespace InvoiceMenecerApi.Migrations
                     b.ToTable("Invoices");
                 });
 
-            modelBuilder.Entity("InvoiceMenecer.Models.InvoiceRow", b =>
+            modelBuilder.Entity("InvoiceMenecerApi.Models.InvoiceRow", b =>
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
@@ -138,9 +138,9 @@ namespace InvoiceMenecerApi.Migrations
                     b.ToTable("InvoiceRows");
                 });
 
-            modelBuilder.Entity("InvoiceMenecer.Models.Invoice", b =>
+            modelBuilder.Entity("InvoiceMenecerApi.Models.Invoice", b =>
                 {
-                    b.HasOne("InvoiceMenecer.Models.Customer", "Customer")
+                    b.HasOne("InvoiceMenecerApi.Models.Customer", "Customer")
                         .WithMany("Invoices")
                         .HasForeignKey("CustomerId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -149,9 +149,9 @@ namespace InvoiceMenecerApi.Migrations
                     b.Navigation("Customer");
                 });
 
-            modelBuilder.Entity("InvoiceMenecer.Models.InvoiceRow", b =>
+            modelBuilder.Entity("InvoiceMenecerApi.Models.InvoiceRow", b =>
                 {
-                    b.HasOne("InvoiceMenecer.Models.Invoice", "Invoice")
+                    b.HasOne("InvoiceMenecerApi.Models.Invoice", "Invoice")
                         .WithMany("Rows")
                         .HasForeignKey("InvoiceId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -160,12 +160,12 @@ namespace InvoiceMenecerApi.Migrations
                     b.Navigation("Invoice");
                 });
 
-            modelBuilder.Entity("InvoiceMenecer.Models.Customer", b =>
+            modelBuilder.Entity("InvoiceMenecerApi.Models.Customer", b =>
                 {
                     b.Navigation("Invoices");
                 });
 
-            modelBuilder.Entity("InvoiceMenecer.Models.Invoice", b =>
+            modelBuilder.Entity("InvoiceMenecerApi.Models.Invoice", b =>
                 {
                     b.Navigation("Rows");
                 });

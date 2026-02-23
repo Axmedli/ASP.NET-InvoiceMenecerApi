@@ -1,4 +1,4 @@
-﻿namespace InvoiceMenecer.Models;
+﻿namespace InvoiceMenecerApi.Models;
 
 public class Invoice
 {

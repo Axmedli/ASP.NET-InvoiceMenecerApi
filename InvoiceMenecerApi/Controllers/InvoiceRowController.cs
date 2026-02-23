@@ -1,12 +1,14 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using InvoiceMenecerApi.Services.Interfaces;
+﻿using InvoiceMenecerApi.Common;
 using InvoiceMenecerApi.DTOs.InvoiceDto;
-using ASP_NET_08.Common;
+using InvoiceMenecerApi.Services.Interfaces;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 
 namespace InvoiceMenecerApi.Controllers;
 
 [Route("api/[controller]")]
 [ApiController]
+[Authorize(Policy = "UserOrAbove")]
 public class InvoiceRowController : ControllerBase
 {
     private readonly IInvoiceRowService _invoiceRowService;

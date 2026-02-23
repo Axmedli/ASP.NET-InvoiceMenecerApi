@@ -1,6 +1,6 @@
-﻿using ASP_NET_08.Common;
+﻿using InvoiceMenecerApi.Common;
 using AutoMapper;
-using InvoiceMenecer.Models;
+using InvoiceMenecerApi.Models;
 using InvoiceMenecerApi.DTOs.InvoiceDto;
 using InvoiceMenecerApi.Services.Interfaces;
 using Microsoft.EntityFrameworkCore;
@@ -27,7 +27,7 @@ public class InvoiceService : IInvoiceService
             .Include(i => i.Customer)
             .FirstOrDefaultAsync(i => i.Id == invoiceId && i.DeletedAt == null);
 
-        if (invoice == null) return null;
+        if (invoice == null) return null!;
 
         invoice.Status = newStatus;
         invoice.UpdatedAt = DateTimeOffset.UtcNow;
@@ -130,9 +130,9 @@ public class InvoiceService : IInvoiceService
                                  .Include(i => i.Customer)
                                  .FirstOrDefaultAsync(i => i.Id == invoiceId && i.DeletedAt == null);
 
-        if (updatedInvoice == null) return null;
+        if (updatedInvoice == null) return null!;
 
-        if (updatedInvoice.Status != InvoiceStatus.Created) return null;
+        if (updatedInvoice.Status != InvoiceStatus.Created) return null!;
 
         _context.InvoiceRows.RemoveRange(updatedInvoice.Rows);
 

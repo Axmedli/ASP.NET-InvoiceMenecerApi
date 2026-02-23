@@ -93,7 +93,7 @@
             <param name="updateInvoiceDto">Updated invoice data.</param>
             <returns>The updated invoice.</returns>
         </member>
-        <member name="M:InvoiceMenecerApi.Controllers.InvoiceController.ChangeInvoiceStatus(System.Guid,InvoiceMenecer.Models.InvoiceStatus)">
+        <member name="M:InvoiceMenecerApi.Controllers.InvoiceController.ChangeInvoiceStatus(System.Guid,InvoiceMenecerApi.Models.InvoiceStatus)">
             <summary>
             Changes the status of an invoice.
             </summary>
@@ -177,6 +177,115 @@
             Delete a row from an invoice
             </summary>
             <param name="id">Row ID</param>
+        </member>
+        <member name="P:InvoiceMenecerApi.DTOs.RegisterRequestDto.FirstName">
+            <summary>
+            User Name
+            </summary>
+            <example>John</example>
+        </member>
+        <member name="P:InvoiceMenecerApi.DTOs.RegisterRequestDto.LastName">
+            <summary>
+            User LastName
+            </summary>
+            <example>Doe</example>
+        </member>
+        <member name="P:InvoiceMenecerApi.DTOs.RegisterRequestDto.Email">
+            <summary>
+            User Email
+            </summary>
+            <example>john@doe.com</example>
+        </member>
+        <member name="P:InvoiceMenecerApi.DTOs.RegisterRequestDto.Password">
+            <summary>
+            Password
+            </summary>
+            <example>P@ssword123!</example>
+        </member>
+        <member name="P:InvoiceMenecerApi.DTOs.RegisterRequestDto.ConfirmPassword">
+            <summary>
+            Confirmed Password
+            </summary>
+            <example>P@ssword123!</example>
+        </member>
+        <member name="P:InvoiceMenecerApi.DTOs.LoginRequestDto.Email">
+            <summary>
+            User Email
+            </summary>
+            <example>john@doe.com</example>
+        </member>
+        <member name="P:InvoiceMenecerApi.DTOs.LoginRequestDto.Password">
+            <summary>
+            Password
+            </summary>
+            <example>P@ssword123!</example>
+        </member>
+        <member name="P:InvoiceMenecerApi.DTOs.AuthResponseDto.AccessToken">
+            <summary>
+            Access token
+            </summary>
+        </member>
+        <member name="P:InvoiceMenecerApi.DTOs.AuthResponseDto.ExpiresAt">
+            <summary>
+            Token Expires date 
+            </summary>
+        </member>
+        <member name="P:InvoiceMenecerApi.DTOs.AuthResponseDto.RefreshToken">
+            <summary>
+            Refresh token
+            </summary>
+        </member>
+        <member name="P:InvoiceMenecerApi.DTOs.AuthResponseDto.RefreshTokenExpiresAt">
+            <summary>
+            Token Expires date 
+            </summary>
+        </member>
+        <member name="P:InvoiceMenecerApi.DTOs.AuthResponseDto.Email">
+            <summary>
+            User Email
+            </summary>
+            <example>john@doe.com</example>
+        </member>
+        <member name="P:InvoiceMenecerApi.DTOs.AuthResponseDto.Roles">
+            <summary>
+            User Roles
+            </summary>
+        </member>
+        <member name="P:InvoiceMenecerApi.DTOs.UpdatePasswordRequest.CurrentPassword">
+            <summary>
+            Current password
+            </summary>
+            <example>P@ssword123!</example>
+        </member>
+        <member name="P:InvoiceMenecerApi.DTOs.UpdatePasswordRequest.NewPassword">
+            <summary>
+            New password
+            </summary>
+            <example>NewP@ssword123!</example>
+        </member>
+        <member name="P:InvoiceMenecerApi.DTOs.UpdatePasswordRequest.ConfirmNewPassword">
+            <summary>
+            Confirmed new password
+            </summary>
+            <example>NewP@ssword123!</example>
+        </member>
+        <member name="P:InvoiceMenecerApi.DTOs.EditProfileRequest.FirstName">
+            <summary>
+            User Name
+            </summary>
+            <example>John</example>
+        </member>
+        <member name="P:InvoiceMenecerApi.DTOs.EditProfileRequest.LastName">
+            <summary>
+            User LastName
+            </summary>
+            <example>Doe</example>
+        </member>
+        <member name="P:InvoiceMenecerApi.DTOs.DeletePasswordRequest.CurrentPassword">
+            <summary>
+            Current password
+            </summary>
+            <example>P@ssword123!</example>
         </member>
         <member name="T:InvoiceMenecerApi.DTOs.CustomerDto.CreateCustomerDto">
             <summary>
@@ -523,6 +632,30 @@
             <inheritdoc />
         </member>
         <member name="M:InvoiceMenecerApi.Migrations.Initial.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="T:InvoiceMenecerApi.Migrations.AddProjectIsApproved">
+            <inheritdoc />
+        </member>
+        <member name="M:InvoiceMenecerApi.Migrations.AddProjectIsApproved.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:InvoiceMenecerApi.Migrations.AddProjectIsApproved.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:InvoiceMenecerApi.Migrations.AddProjectIsApproved.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="T:InvoiceMenecerApi.Migrations.AddApplicationUser">
+            <inheritdoc />
+        </member>
+        <member name="M:InvoiceMenecerApi.Migrations.AddApplicationUser.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:InvoiceMenecerApi.Migrations.AddApplicationUser.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:InvoiceMenecerApi.Migrations.AddApplicationUser.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
             <inheritdoc />
         </member>
     </members>
