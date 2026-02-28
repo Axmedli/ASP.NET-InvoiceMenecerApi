@@ -3,24 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\Murad\\Desktop\\InvoiceMenecerApi\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{CA2791EC-1866-4E3F-A6BC-851F1CBBCAB1}|InvoiceMenecerApi\\InvoiceMenecerApi.csproj|c:\\users\\murad\\desktop\\invoicemenecerapi\\invoicemenecerapi\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CA2791EC-1866-4E3F-A6BC-851F1CBBCAB1}|InvoiceMenecerApi\\InvoiceMenecerApi.csproj|solutionrelative:invoicemenecerapi\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{CA2791EC-1866-4E3F-A6BC-851F1CBBCAB1}|InvoiceMenecerApi\\InvoiceMenecerApi.csproj|c:\\users\\murad\\desktop\\invoicemenecerapi\\invoicemenecerapi\\services\\invoiceservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CA2791EC-1866-4E3F-A6BC-851F1CBBCAB1}|InvoiceMenecerApi\\InvoiceMenecerApi.csproj|solutionrelative:invoicemenecerapi\\services\\invoiceservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CA2791EC-1866-4E3F-A6BC-851F1CBBCAB1}|InvoiceMenecerApi\\InvoiceMenecerApi.csproj|c:\\users\\murad\\desktop\\invoicemenecerapi\\invoicemenecerapi\\services\\interfaces\\iauthservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CA2791EC-1866-4E3F-A6BC-851F1CBBCAB1}|InvoiceMenecerApi\\InvoiceMenecerApi.csproj|solutionrelative:invoicemenecerapi\\services\\interfaces\\iauthservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CA2791EC-1866-4E3F-A6BC-851F1CBBCAB1}|InvoiceMenecerApi\\InvoiceMenecerApi.csproj|c:\\users\\murad\\desktop\\invoicemenecerapi\\invoicemenecerapi\\services\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CA2791EC-1866-4E3F-A6BC-851F1CBBCAB1}|InvoiceMenecerApi\\InvoiceMenecerApi.csproj|solutionrelative:invoicemenecerapi\\services\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CA2791EC-1866-4E3F-A6BC-851F1CBBCAB1}|InvoiceMenecerApi\\InvoiceMenecerApi.csproj|c:\\users\\murad\\desktop\\invoicemenecerapi\\invoicemenecerapi\\dtos\\customer dto\\updatecustomerdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CA2791EC-1866-4E3F-A6BC-851F1CBBCAB1}|InvoiceMenecerApi\\InvoiceMenecerApi.csproj|solutionrelative:invoicemenecerapi\\dtos\\customer dto\\updatecustomerdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CA2791EC-1866-4E3F-A6BC-851F1CBBCAB1}|InvoiceMenecerApi\\InvoiceMenecerApi.csproj|c:\\users\\murad\\desktop\\invoicemenecerapi\\invoicemenecerapi\\dtos\\authdtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CA2791EC-1866-4E3F-A6BC-851F1CBBCAB1}|InvoiceMenecerApi\\InvoiceMenecerApi.csproj|solutionrelative:invoicemenecerapi\\dtos\\authdtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{CA2791EC-1866-4E3F-A6BC-851F1CBBCAB1}|InvoiceMenecerApi\\InvoiceMenecerApi.csproj|c:\\users\\murad\\desktop\\invoicemenecerapi\\invoicemenecerapi\\models\\invoice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CA2791EC-1866-4E3F-A6BC-851F1CBBCAB1}|InvoiceMenecerApi\\InvoiceMenecerApi.csproj|solutionrelative:invoicemenecerapi\\models\\invoice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -39,66 +27,27 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "AuthController.cs",
-              "DocumentMoniker": "C:\\Users\\Murad\\Desktop\\InvoiceMenecerApi\\InvoiceMenecerApi\\Controllers\\AuthController.cs",
-              "RelativeDocumentMoniker": "InvoiceMenecerApi\\Controllers\\AuthController.cs",
-              "ToolTip": "C:\\Users\\Murad\\Desktop\\InvoiceMenecerApi\\InvoiceMenecerApi\\Controllers\\AuthController.cs*",
-              "RelativeToolTip": "InvoiceMenecerApi\\Controllers\\AuthController.cs*",
-              "ViewState": "AgIAAC8AAAAAAAAAAADwv0UAAAAZAAAAAAAAAA==",
+              "Title": "InvoiceService.cs",
+              "DocumentMoniker": "C:\\Users\\Murad\\Desktop\\InvoiceMenecerApi\\InvoiceMenecerApi\\Services\\InvoiceService.cs",
+              "RelativeDocumentMoniker": "InvoiceMenecerApi\\Services\\InvoiceService.cs",
+              "ToolTip": "C:\\Users\\Murad\\Desktop\\InvoiceMenecerApi\\InvoiceMenecerApi\\Services\\InvoiceService.cs",
+              "RelativeToolTip": "InvoiceMenecerApi\\Services\\InvoiceService.cs",
+              "ViewState": "AgIAAD4BAAAAAAAAAAAAAEkBAAAbAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-23T09:10:59.024Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "AuthService.cs",
-              "DocumentMoniker": "C:\\Users\\Murad\\Desktop\\InvoiceMenecerApi\\InvoiceMenecerApi\\Services\\AuthService.cs",
-              "RelativeDocumentMoniker": "InvoiceMenecerApi\\Services\\AuthService.cs",
-              "ToolTip": "C:\\Users\\Murad\\Desktop\\InvoiceMenecerApi\\InvoiceMenecerApi\\Services\\AuthService.cs",
-              "RelativeToolTip": "InvoiceMenecerApi\\Services\\AuthService.cs",
-              "ViewState": "AgIAAKgAAAAAAAAAAAAIwL8AAAAgAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-23T09:05:43.085Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "UpdateCustomerDto.cs",
-              "DocumentMoniker": "C:\\Users\\Murad\\Desktop\\InvoiceMenecerApi\\InvoiceMenecerApi\\DTOs\\Customer Dto\\UpdateCustomerDto.cs",
-              "RelativeDocumentMoniker": "InvoiceMenecerApi\\DTOs\\Customer Dto\\UpdateCustomerDto.cs",
-              "ToolTip": "C:\\Users\\Murad\\Desktop\\InvoiceMenecerApi\\InvoiceMenecerApi\\DTOs\\Customer Dto\\UpdateCustomerDto.cs",
-              "RelativeToolTip": "InvoiceMenecerApi\\DTOs\\Customer Dto\\UpdateCustomerDto.cs",
-              "ViewState": "AgIAAAoAAAAAAAAAAAAzwAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-23T09:02:15.197Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "AuthDtos.cs",
-              "DocumentMoniker": "C:\\Users\\Murad\\Desktop\\InvoiceMenecerApi\\InvoiceMenecerApi\\DTOs\\AuthDtos.cs",
-              "RelativeDocumentMoniker": "InvoiceMenecerApi\\DTOs\\AuthDtos.cs",
-              "ToolTip": "C:\\Users\\Murad\\Desktop\\InvoiceMenecerApi\\InvoiceMenecerApi\\DTOs\\AuthDtos.cs",
-              "RelativeToolTip": "InvoiceMenecerApi\\DTOs\\AuthDtos.cs",
-              "ViewState": "AgIAAFYAAAAAAAAAAAAAwGsAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-23T09:02:11.953Z",
+              "WhenOpened": "2026-02-28T09:29:42.767Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "IAuthService.cs",
-              "DocumentMoniker": "C:\\Users\\Murad\\Desktop\\InvoiceMenecerApi\\InvoiceMenecerApi\\Services\\Interfaces\\IAuthService.cs",
-              "RelativeDocumentMoniker": "InvoiceMenecerApi\\Services\\Interfaces\\IAuthService.cs",
-              "ToolTip": "C:\\Users\\Murad\\Desktop\\InvoiceMenecerApi\\InvoiceMenecerApi\\Services\\Interfaces\\IAuthService.cs",
-              "RelativeToolTip": "InvoiceMenecerApi\\Services\\Interfaces\\IAuthService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAoAAAAaAAAAAAAAAA==",
+              "Title": "Invoice.cs",
+              "DocumentMoniker": "C:\\Users\\Murad\\Desktop\\InvoiceMenecerApi\\InvoiceMenecerApi\\Models\\Invoice.cs",
+              "RelativeDocumentMoniker": "InvoiceMenecerApi\\Models\\Invoice.cs",
+              "ToolTip": "C:\\Users\\Murad\\Desktop\\InvoiceMenecerApi\\InvoiceMenecerApi\\Models\\Invoice.cs",
+              "RelativeToolTip": "InvoiceMenecerApi\\Models\\Invoice.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAxAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-23T09:01:04.472Z",
+              "WhenOpened": "2026-02-28T09:16:11.563Z",
               "EditorCaption": ""
             }
           ]

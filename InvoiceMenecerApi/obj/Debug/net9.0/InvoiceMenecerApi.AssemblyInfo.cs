@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("InvoiceMenecerApi")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e649ecd0371016c85882fd7854e1515e67944e90")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b7304f7e45ab4a158e7183af79e8569bc6b8c453")]
 [assembly: System.Reflection.AssemblyProductAttribute("InvoiceMenecerApi")]
 [assembly: System.Reflection.AssemblyTitleAttribute("InvoiceMenecerApi")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

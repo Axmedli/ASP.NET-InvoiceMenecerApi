@@ -600,6 +600,41 @@
   },
   {
     "ContainingType": "InvoiceMenecerApi.Controllers.InvoiceController",
+    "Method": "DownloadInvoiceAsPdf",
+    "RelativePath": "api/Invoice/{id}/download/pdf",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Microsoft.AspNetCore.Mvc.FileContentResult",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      },
+      {
+        "Type": "Microsoft.AspNetCore.Mvc.ProblemDetails",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 404
+      }
+    ]
+  },
+  {
+    "ContainingType": "InvoiceMenecerApi.Controllers.InvoiceController",
     "Method": "ChangeInvoiceStatus",
     "RelativePath": "api/Invoice/{id}/status",
     "HttpMethod": "POST",

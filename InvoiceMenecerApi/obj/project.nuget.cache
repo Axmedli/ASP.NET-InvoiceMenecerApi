@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "qMADNzuN9uY=",
+  "dgSpecHash": "VDyAo6qtZec=",
   "success": true,
   "projectFilePath": "C:\\Users\\Murad\\Desktop\\InvoiceMenecerApi\\InvoiceMenecerApi\\InvoiceMenecerApi.csproj",
   "expectedPackageFiles": [
@@ -46,6 +46,7 @@
     "C:\\Users\\Murad\\.nuget\\packages\\microsoft.sqlserver.server\\1.0.0\\microsoft.sqlserver.server.1.0.0.nupkg.sha512",
     "C:\\Users\\Murad\\.nuget\\packages\\microsoft.win32.systemevents\\6.0.0\\microsoft.win32.systemevents.6.0.0.nupkg.sha512",
     "C:\\Users\\Murad\\.nuget\\packages\\mono.texttemplating\\3.0.0\\mono.texttemplating.3.0.0.nupkg.sha512",
+    "C:\\Users\\Murad\\.nuget\\packages\\questpdf\\2026.2.2\\questpdf.2026.2.2.nupkg.sha512",
     "C:\\Users\\Murad\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\9.0.6\\swashbuckle.aspnetcore.swagger.9.0.6.nupkg.sha512",
     "C:\\Users\\Murad\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\9.0.6\\swashbuckle.aspnetcore.swaggergen.9.0.6.nupkg.sha512",
     "C:\\Users\\Murad\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\9.0.6\\swashbuckle.aspnetcore.swaggerui.9.0.6.nupkg.sha512",

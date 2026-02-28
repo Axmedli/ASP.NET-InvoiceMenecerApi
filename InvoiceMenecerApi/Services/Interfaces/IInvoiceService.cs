@@ -17,4 +17,6 @@ public interface IInvoiceService
     Task<InvoiceResponseDto> ChangeInvoiceStatusAsync(Guid invoiceId, InvoiceStatus newStatus);
     Task<bool> HardDeleteInvoiceAsync(Guid invoiceId);
     Task<bool> ArchiveInvoiceAsync(Guid invoiceId);
+
+    Task<byte[]> DownloadInvoiceAsPdfAsync(Guid invoiceId);
 }

@@ -92,6 +92,10 @@
               "target": "Package",
               "version": "[9.0.12, )"
             },
+            "QuestPDF": {
+              "target": "Package",
+              "version": "[2026.2.2, )"
+            },
             "Swashbuckle.AspNetCore.Swagger": {
               "target": "Package",
               "version": "[9.0.6, )"
@@ -124,7 +128,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.102/PortableRuntimeIdentifierGraph.json",
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.103/PortableRuntimeIdentifierGraph.json",
           "packagesToPrune": {
             "Microsoft.AspNetCore": "(, 9.0.32767]",
             "Microsoft.AspNetCore.Antiforgery": "(, 9.0.32767]",

@@ -186,4 +186,29 @@ public class InvoiceController : ControllerBase
         return Ok(ApiResponse<PagedResult<InvoiceResponseDto>>
             .SuccessResponse(pagedInvoices));
     }
+
+    /// <summary>
+    /// Downloads the invoice as a PDF file.
+    /// </summary>
+    /// <param name="id">Invoice ID.</param>
+    /// <returns>PDF file.</returns>
+    /// <response code="200">Returns the PDF file.</response>
+    /// <response code="404">If the invoice is not found.</response>
+    [HttpGet("{id}/download/pdf")]
+    [ProducesResponseType(typeof(FileContentResult), StatusCodes.Status200OK)]
+    [ProducesResponseType(StatusCodes.Status404NotFound)]
+    public async Task<IActionResult> DownloadInvoiceAsPdf(Guid id)
+    {
+        try
+        {
+            var fileBytes = await _invoiceService.DownloadInvoiceAsPdfAsync(id);
+            var fileName = $"Invoice_{id.ToString().Substring(0, 8)}_{DateTime.Now:yyyyMMdd}.pdf";
+
+            return File(fileBytes, "application/pdf", fileName);
+        }
+        catch (Exception ex)
+        {
+            return NotFound(new { message = ex.Message });
+        }
+    }
 }

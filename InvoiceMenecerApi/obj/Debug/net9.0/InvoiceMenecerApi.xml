@@ -146,6 +146,15 @@
             <returns>An ApiResponse containing a PagedResult of InvoiceResponseDto with items and paging metadata.</returns>
             <response code="200">Returns the paged list of invoices.</response>
         </member>
+        <member name="M:InvoiceMenecerApi.Controllers.InvoiceController.DownloadInvoiceAsPdf(System.Guid)">
+            <summary>
+            Downloads the invoice as a PDF file.
+            </summary>
+            <param name="id">Invoice ID.</param>
+            <returns>PDF file.</returns>
+            <response code="200">Returns the PDF file.</response>
+            <response code="404">If the invoice is not found.</response>
+        </member>
         <member name="M:InvoiceMenecerApi.Controllers.InvoiceRowController.GetRowsByInvoiceId(System.Guid)">
             <summary>
             Get all rows for a specific invoice

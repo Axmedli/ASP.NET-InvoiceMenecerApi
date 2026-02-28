@@ -1,9 +1,12 @@
-﻿using InvoiceMenecerApi.Common;
-using AutoMapper;
-using InvoiceMenecerApi.Models;
+﻿using AutoMapper;
+using InvoiceMenecerApi.Common;
 using InvoiceMenecerApi.DTOs.InvoiceDto;
+using InvoiceMenecerApi.Models;
 using InvoiceMenecerApi.Services.Interfaces;
 using Microsoft.EntityFrameworkCore;
+using QuestPDF.Fluent;
+using QuestPDF.Helpers;
+using QuestPDF.Infrastructure;
 
 namespace InvoiceMenecerApi.Services;
 
@@ -264,5 +267,157 @@ public class InvoiceService : IInvoiceService
                 : query.OrderBy(i => i.UpdatedAt),
             _ => query.OrderByDescending(i => i.CreatedAt)
         };
+    }
+
+    public async Task<byte[]> DownloadInvoiceAsPdfAsync(Guid invoiceId)
+    {
+        var invoice = await _context
+            .Invoices
+            .Include(i => i.Customer)
+            .Include(i => i.Rows)
+            .FirstOrDefaultAsync(i => i.Id == invoiceId && i.DeletedAt == null);
+
+        if (invoice == null)
+            throw new Exception("Invoice not found");
+
+        QuestPDF.Settings.License = LicenseType.Community;
+
+        var document = Document.Create(container =>
+        {
+            container.Page(page =>
+            {
+                page.Size(PageSizes.A4);
+                page.Margin(50);
+                page.PageColor(Colors.White);
+                page.DefaultTextStyle(x => x.FontSize(11));
+
+                page.Header()
+                    .Column(col =>
+                    {
+                        col.Item().Text($"INVOICE #{invoice.Id.ToString().Substring(0, 8).ToUpper()}")
+                            .FontSize(24)
+                            .Bold()
+                            .FontColor(Colors.Blue.Medium);
+
+                        col.Item().PaddingTop(5).BorderBottom(2).BorderColor(Colors.Grey.Medium);
+                    });
+
+                page.Content()
+                    .PaddingVertical(20)
+                    .Column(col =>
+                    {
+                        col.Item().Row(row =>
+                        {
+                            row.RelativeItem().Column(column =>
+                            {
+                                column.Item().Text("BILL TO:").FontSize(10).Bold().FontColor(Colors.Grey.Darken2);
+                                column.Item().PaddingTop(5).Text(invoice.Customer.Name).FontSize(12).Bold();
+                                column.Item().Text(invoice.Customer.Email).FontSize(10);
+                                if (!string.IsNullOrWhiteSpace(invoice.Customer.PhoneNumber))
+                                    column.Item().Text(invoice.Customer.PhoneNumber).FontSize(10);
+                                if (!string.IsNullOrWhiteSpace(invoice.Customer.Address))
+                                    column.Item().Text(invoice.Customer.Address).FontSize(10);
+                            });
+
+                            row.RelativeItem().Column(column =>
+                            {
+                                column.Item().AlignRight().Text("INVOICE DETAILS").FontSize(10).Bold().FontColor(Colors.Grey.Darken2);
+                                column.Item().PaddingTop(5).AlignRight().Text($"Date: {invoice.CreatedAt:dd/MM/yyyy}").FontSize(10);
+                                column.Item().AlignRight().Text($"Period: {invoice.StartDate:dd/MM/yyyy} - {invoice.EndDate:dd/MM/yyyy}").FontSize(10);
+                                column.Item().AlignRight().Text($"Status: {invoice.Status}").FontSize(10).Bold()
+                                    .FontColor(invoice.Status == InvoiceStatus.Paid ? Colors.Green.Medium : Colors.Orange.Medium);
+                            });
+                        });
+
+                        col.Item().PaddingTop(30);
+
+                        col.Item().Table(table =>
+                        {
+                            table.ColumnsDefinition(columns =>
+                            {
+                                columns.RelativeColumn(3);
+                                columns.RelativeColumn(1);
+                                columns.RelativeColumn(1);
+                                columns.RelativeColumn(1);
+                            });
+
+                            table.Header(header =>
+                            {
+                                header.Cell().Element(HeaderCellStyle).Text("SERVICE").Bold();
+                                header.Cell().Element(HeaderCellStyle).AlignRight().Text("QUANTITY").Bold();
+                                header.Cell().Element(HeaderCellStyle).AlignRight().Text("AMOUNT").Bold();
+                                header.Cell().Element(HeaderCellStyle).AlignRight().Text("SUM").Bold();
+
+                                static IContainer HeaderCellStyle(IContainer container)
+                                {
+                                    return container
+                                        .BorderBottom(2)
+                                        .BorderColor(Colors.Blue.Medium)
+                                        .Background(Colors.Blue.Lighten5)
+                                        .Padding(10);
+                                }
+                            });
+
+                            foreach (var row in invoice.Rows)
+                            {
+                                table.Cell().Element(DataCellStyle).Text(row.Service);
+                                table.Cell().Element(DataCellStyle).AlignRight().Text(row.Quantity.ToString("N2"));
+                                table.Cell().Element(DataCellStyle).AlignRight().Text(row.Amount.ToString("N2"));
+                                table.Cell().Element(DataCellStyle).AlignRight().Text(row.Sum.ToString("N2"));
+
+                                static IContainer DataCellStyle(IContainer container)
+                                {
+                                    return container
+                                        .BorderBottom(1)
+                                        .BorderColor(Colors.Grey.Lighten2)
+                                        .Padding(10);
+                                }
+                            }
+                        });
+
+                        col.Item().PaddingTop(20);
+
+                        col.Item().AlignRight().Width(200).Column(column =>
+                        {
+                            column.Item()
+                                .Background(Colors.Blue.Medium)
+                                .Padding(15)
+                                .Row(row =>
+                                {
+                                    row.RelativeItem().Text("TOTAL:").FontSize(14).Bold().FontColor(Colors.White);
+                                    row.RelativeItem().AlignRight().Text($"{invoice.TotalSum:N2}").FontSize(16).Bold().FontColor(Colors.White);
+                                });
+                        });
+
+                        if (!string.IsNullOrWhiteSpace(invoice.Comment))
+                        {
+                            col.Item().PaddingTop(30);
+                            col.Item().Column(column =>
+                            {
+                                column.Item().Text("NOTES:").FontSize(10).Bold().FontColor(Colors.Grey.Darken2);
+                                column.Item().PaddingTop(5)
+                                    .BorderLeft(3)
+                                    .BorderColor(Colors.Blue.Medium)
+                                    .PaddingLeft(10)
+                                    .Text(invoice.Comment)
+                                    .FontSize(10)
+                                    .Italic();
+                            });
+                        }
+                    });
+
+                page.Footer()
+                    .AlignCenter()
+                    .DefaultTextStyle(x => x.FontSize(9).FontColor(Colors.Grey.Medium))
+                    .Text(x =>
+                    {
+                        x.Span("Generated on ");
+                        x.Span(DateTime.Now.ToString("dd/MM/yyyy HH:mm")).Bold();
+                        x.Span(" | Invoice Manager System");
+                    });
+            });
+        });
+
+        return document.GeneratePdf();
     }
 }
